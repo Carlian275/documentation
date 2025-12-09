@@ -97,6 +97,7 @@
 <li><a class="reference internal" href="#">Getting started</a><ul>
 <li><a class="reference internal" href="#setup-a-jtag-connection">Setup a JTAG connection</a></li>
 <li><a class="reference internal" href="#boot-u-boot-proper">Boot U-Boot Proper</a></li>
+<li><a class="reference internal" href="#boot-linux">Boot Linux</a></li>
 </ul>
 </li>
 </ul>
@@ -521,19 +522,41 @@ following configs:</p>
 <div class="clear-left"></div></div></div></section>
 <section id="boot-u-boot-proper">
 <h2>Boot U-Boot Proper<a class="headerlink" href="#boot-u-boot-proper" title="Link to this heading"></a></h2>
-<p>In another terminal either <code class="docutils literal notranslate"><span class="pre">cd</span></code> into the extracted release archive or the
-appropriate build output directory when building from source. Then load and run
-the two U-Boot stages using <code class="docutils literal notranslate"><span class="pre">gdb</span></code>. Note that Debian and Ubuntu ship
-multi-architecture GDB support in a separate package.</p>
-<p>After loading U-Boot SPL wait 2-3 seconds to allow SPL to complete execution
-before interrupting it with <code class="docutils literal notranslate"><span class="pre">^C</span></code>.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt-get install -y gdb-multiarch</span>
-<span class="go">gdb-multiarch</span>
-<span class="gp gp-VirtualEnv">(gdb)</span> <span class="go">load u-boot-spl</span>
-<span class="gp gp-VirtualEnv">(gdb)</span> <span class="go">c</span>
-<span class="go">^C</span>
-<span class="gp gp-VirtualEnv">(gdb)</span> <span class="go">load u-boot</span>
-<span class="gp gp-VirtualEnv">(gdb)</span> <span class="go">c</span>
+<p>To boot U-Boot SPL and U-Boot Proper using GDB install
+<code class="docutils literal notranslate"><span class="pre">gdb-multiarch</span></code> on Debian or Ubuntu systems:</p>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>gdb-multiarch
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div><p>In the terminal, <code class="docutils literal notranslate"><span class="pre">cd</span></code> into the extracted release archive or the appropriate
+build output directory.</p>
+<p>Then download the GDB automation <code class="xref download docutils literal notranslate"><span class="pre">u-boot.gdb</span></code> script using:</p>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-O<span class="w"> </span>https://raw.githubusercontent.com/analogdevicesinc/documentation/refs/heads/main/docs/products/adsp/u-boot.gdb
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div><p>Once downloaded, start GDB and run the following command with the script in order to
+load and run both U-Boot stages as:</p>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gdb-multiarch<span class="w"> </span>-x<span class="w"> </span>u-boot.gdb
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div></section>
+<section id="boot-linux">
+<h2>Boot Linux<a class="headerlink" href="#boot-linux" title="Link to this heading"></a></h2>
+<p>Once U-Boot Proper is running and a U-Boot prompt is accessible over serial it
+is possible to load and boot Linux.</p>
+<p>In a new terminal <code class="docutils literal notranslate"><span class="pre">cd</span></code> into the extracted release archive and run a web
+server (e.g. <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">http.server</span></code>).</p>
+<p>In the console of U-Boot, we can load images as:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">=&gt; dhcp</span>
+<span class="go">=&gt; wget ${fdt_addr_r} &lt;host-ip-addr&gt;:/&lt;path-to-image&gt;</span>
 </pre></div>
 </div>
 </section>
