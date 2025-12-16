@@ -341,8 +341,10 @@ Content on this topic
 <li class="toctree-l3"><a class="reference internal" href="../prerequisites.html">Prerequisites</a></li>
 <li class="toctree-l3 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-12-14-1" id="toctree-collapse-12-14-1" checked=""/><div class="collapse"><a class="current reference internal" href="#">Quick start guides</a><label for="toctree-collapse-12-14-1"><div class="icon"></div></label></div><ul>
 <li class="toctree-l4"><a class="reference internal" href="a10soc.html">On A10SoC</a></li>
-<li class="toctree-l4"><a class="reference internal" href="versal.html">On VCK190</a></li>
-<li class="toctree-l4"><a class="reference internal" href="zynqmp.html">On ZCU102</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vck190.html">On VCK190</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zc706.html">On ZC706</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vcu118.html">On VCU118</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zcu102.html">On ZCU102</a></li>
 </ul>
 </li>
 </ul>
@@ -475,8 +477,8 @@ Content on this topic
 <span id="ad9081-quickstart"></span><h1>Quick start guides<a class="headerlink" href="#quick-start-guides" title="Link to this heading"></a></h1>
 <p>The Quick start guides provide simple step by step instructions on how to do
 an initial system setup for the <a class="icon adi reference external" href="https://www.analog.com/EVAL-AD9081" target="_blank">EVAL-AD9081</a> / <a class="icon adi reference external" href="https://www.analog.com/EVAL-AD9082" target="_blank">EVAL-AD9082</a>
-boards on various FPGA development boards. In these guides, we will discuss how
-to program the bitstream, run a no-OS program or boot a Linux distribution.</p>
+boards on various FPGA development boards. In these guides, we will discuss
+how to program the bitstream, run a no-OS program or boot a Linux distribution.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="a10soc.html">On A10SoC</a><ul>
@@ -502,57 +504,131 @@ to program the bitstream, run a no-OS program or boot a Linux distribution.</p>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="versal.html">On VCK190</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="versal.html#using-linux-as-software">Using Linux as software</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="versal.html#necessary-files">Necessary files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="versal.html#required-software">Required Software</a></li>
-<li class="toctree-l3"><a class="reference internal" href="versal.html#required-hardware">Required Hardware</a></li>
-<li class="toctree-l3"><a class="reference internal" href="versal.html#testing">Testing</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="versal.html#creating-the-setup">Creating the setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vck190.html">On VCK190</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vck190.html#using-linux-as-software">Using Linux as software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vck190.html#necessary-files">Necessary files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vck190.html#required-software">Required Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vck190.html#required-hardware">Required Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vck190.html#testing">Testing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="vck190.html#creating-the-setup">Creating the setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vck190.html#acap-sd-card-boot-files">ACAP SD card boot files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vck190.html#setting-up-uart">Setting up UART</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vck190.html#boot-messages">Boot messages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vck190.html#useful-commands-for-the-serial-terminal">Useful commands for the serial terminal</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="versal.html#acap-sd-card-boot-files">ACAP SD card boot files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="versal.html#setting-up-uart">Setting up UART</a></li>
-<li class="toctree-l3"><a class="reference internal" href="versal.html#boot-messages">Boot messages</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="versal.html#useful-commands-for-the-serial-terminal">Useful commands for the serial terminal</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="versal.html#adi-iio-oscilloscope">ADI IIO Oscilloscope</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="versal.html#remote">Remote</a></li>
-<li class="toctree-l4"><a class="reference internal" href="versal.html#locally">Locally</a></li>
-<li class="toctree-l4"><a class="reference internal" href="versal.html#about-the-iio-devices">About the IIO devices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vck190.html#adi-iio-oscilloscope">ADI IIO Oscilloscope</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="vck190.html#remote">Remote</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vck190.html#locally">Locally</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="zynqmp.html">On ZCU102</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="zynqmp.html#using-linux-as-software">Using Linux as software</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="zynqmp.html#necessary-files">Necessary files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="zynqmp.html#required-software">Required Software</a></li>
-<li class="toctree-l3"><a class="reference internal" href="zynqmp.html#required-hardware">Required Hardware</a></li>
-<li class="toctree-l3"><a class="reference internal" href="zynqmp.html#testing">Testing</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="zynqmp.html#creating-the-setup">Creating the setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="zynqmp.html#boot-messages">Boot messages</a></li>
-<li class="toctree-l4"><a class="reference internal" href="zynqmp.html#useful-commands-for-the-serial-terminal">Useful commands for the serial terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zc706.html">On ZC706</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="zc706.html#using-linux-as-software">Using Linux as software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="zc706.html#necessary-files">Necessary files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zc706.html#required-software">Required Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zc706.html#required-hardware">Required Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zc706.html#testing">Testing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="zc706.html#creating-the-setup">Creating the setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zc706.html#boot-messages">Boot messages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zc706.html#useful-commands-for-the-serial-terminal">Useful commands for the serial terminal</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="zynqmp.html#adi-iio-oscilloscope">ADI IIO Oscilloscope</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="zynqmp.html#remote">Remote</a></li>
-<li class="toctree-l4"><a class="reference internal" href="zynqmp.html#locally">Locally</a></li>
-<li class="toctree-l4"><a class="reference internal" href="zynqmp.html#about-the-iio-devices">About the IIO devices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zc706.html#adi-iio-oscilloscope">ADI IIO Oscilloscope</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="zc706.html#remote">Remote</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zc706.html#locally">Locally</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="zynqmp.html#using-no-os-as-software">Using no-OS as software</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="zynqmp.html#id1">Necessary files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="zynqmp.html#id2">Required Software</a></li>
-<li class="toctree-l3"><a class="reference internal" href="zynqmp.html#id3">Required Hardware</a></li>
-<li class="toctree-l3"><a class="reference internal" href="zynqmp.html#id4">Testing</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="zynqmp.html#id5">Creating the setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="zynqmp.html#console-output">Console output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zc706.html#using-no-os-as-software">Using no-OS as software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="zc706.html#id1">Necessary files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zc706.html#id2">Required Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zc706.html#id3">Required Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zc706.html#id4">Testing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="zc706.html#id5">Creating the setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zc706.html#console-output">Console output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="zc706.html#id6">ADI IIO Oscilloscope</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="zc706.html#id7">Remote</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zc706.html#id8">Locally</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vcu118.html">On VCU118</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vcu118.html#using-linux-as-software">Using Linux as software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vcu118.html#necessary-files">Necessary files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vcu118.html#required-software">Required Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vcu118.html#required-hardware">Required Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vcu118.html#testing">Testing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="vcu118.html#creating-the-setup">Creating the setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vcu118.html#boot-messages">Boot messages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vcu118.html#useful-commands-for-the-serial-terminal">Useful commands for the serial terminal</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="vcu118.html#adi-iio-oscilloscope">ADI IIO Oscilloscope</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="vcu118.html#remote">Remote</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vcu118.html#locally">Locally</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vcu118.html#using-no-os-as-software">Using no-OS as software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vcu118.html#id1">Necessary files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vcu118.html#id2">Required Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vcu118.html#id3">Required Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vcu118.html#id4">Testing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="vcu118.html#id5">Creating the setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vcu118.html#console-output">Console output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="vcu118.html#id6">ADI IIO Oscilloscope</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="vcu118.html#id7">Remote</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vcu118.html#id8">Locally</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="zcu102.html">On ZCU102</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="zcu102.html#using-linux-as-software">Using Linux as software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="zcu102.html#necessary-files">Necessary files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zcu102.html#required-software">Required Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zcu102.html#required-hardware">Required Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zcu102.html#testing">Testing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="zcu102.html#creating-the-setup">Creating the setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zcu102.html#boot-messages">Boot messages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zcu102.html#useful-commands-for-the-serial-terminal">Useful commands for the serial terminal</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="zcu102.html#adi-iio-oscilloscope">ADI IIO Oscilloscope</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="zcu102.html#remote">Remote</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zcu102.html#locally">Locally</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zcu102.html#about-the-iio-devices">About the IIO devices</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="zcu102.html#using-no-os-as-software">Using no-OS as software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="zcu102.html#id1">Necessary files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zcu102.html#id2">Required Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zcu102.html#id3">Required Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zcu102.html#id4">Testing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="zcu102.html#id5">Creating the setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zcu102.html#console-output">Console output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="zcu102.html#id6">ADI IIO Oscilloscope</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="zcu102.html#id7">Remote</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zcu102.html#id8">Locally</a></li>
 </ul>
 </li>
 </ul>

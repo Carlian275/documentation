@@ -4,17 +4,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta content="The following document describes how to build and flash firmware for boards with the NINA-W102 WiFi module. As an example, it will use the MAX32690 Arduino Form-Factor Board. It will also describe how to build and  flash the Zephyr Wifi sample to work with this board once the NINA-W102 has been flashed." name="description" />
+<meta content="This guide provides quick instructions on how to setup the EVAL-AD9081 / EVAL-AD9082 on:" name="description" />
 
-    <title>NINA-W102 Networking Support &#8212; System Level Documentation  documentation</title>
+    <title>VCU118 Quick start &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8e8a900e" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/app.min.css?v=31a9e0ba" />
     <script async="async" src="../../../../_static/app.umd.js?v=3a4867e9"></script>
     <link rel="icon" href="../../../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="AD-BMSE2E3W-SL" href="../../ad-bmse2e3w-sl/index.html" />
-    <link rel="prev" title="AD-T1LUSB2.0-EBZ" href="../ad-t1lusb-ebz/index.html" />
+    <link rel="next" title="ZCU102 Quick start" href="zcu102.html" />
+    <link rel="prev" title="ZC706 Quick start" href="zc706.html" />
    
   
   
@@ -94,19 +94,40 @@
         </div>
         <nav>
           <ul>
-<li><a class="reference internal" href="#">NINA-W102 Networking Support</a><ul>
-<li><a class="reference internal" href="#wifi">WiFi</a></li>
-<li><a class="reference internal" href="#pre-built-firmware-for-esp-nina-w102">Pre-Built Firmware for ESP NINA-W102</a></li>
-<li><a class="reference internal" href="#building-nina-w102-firmware">Building NINA-W102 Firmware</a></li>
-<li><a class="reference internal" href="#programming-the-nina-w102-on-ad-apard32690">Programming the NINA-W102 on AD-APARD32690</a></li>
-<li><a class="reference internal" href="#standalone-programming">Standalone Programming</a></li>
-<li><a class="reference internal" href="#at-command-verification">AT Command Verification</a></li>
-<li><a class="reference internal" href="#integrating-into-zephyr">Integrating Into Zephyr</a><ul>
-<li><a class="reference internal" href="#apard-wifi-overlay">apard_wifi.overlay</a></li>
-<li><a class="reference internal" href="#apard-wifi-conf">apard_wifi.conf</a></li>
+<li><a class="reference internal" href="#">VCU118 Quick start</a><ul>
+<li><a class="reference internal" href="#using-linux-as-software">Using Linux as software</a><ul>
+<li><a class="reference internal" href="#necessary-files">Necessary files</a></li>
+<li><a class="reference internal" href="#required-software">Required Software</a></li>
+<li><a class="reference internal" href="#required-hardware">Required Hardware</a></li>
+<li><a class="reference internal" href="#testing">Testing</a><ul>
+<li><a class="reference internal" href="#creating-the-setup">Creating the setup</a></li>
+<li><a class="reference internal" href="#boot-messages">Boot messages</a></li>
+<li><a class="reference internal" href="#useful-commands-for-the-serial-terminal">Useful commands for the serial terminal</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#testing">Testing</a></li>
+<li><a class="reference internal" href="#adi-iio-oscilloscope">ADI IIO Oscilloscope</a><ul>
+<li><a class="reference internal" href="#remote">Remote</a></li>
+<li><a class="reference internal" href="#locally">Locally</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-no-os-as-software">Using no-OS as software</a><ul>
+<li><a class="reference internal" href="#id1">Necessary files</a></li>
+<li><a class="reference internal" href="#id2">Required Software</a></li>
+<li><a class="reference internal" href="#id3">Required Hardware</a></li>
+<li><a class="reference internal" href="#id4">Testing</a><ul>
+<li><a class="reference internal" href="#id5">Creating the setup</a></li>
+<li><a class="reference internal" href="#console-output">Console output</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">ADI IIO Oscilloscope</a><ul>
+<li><a class="reference internal" href="#id7">Remote</a></li>
+<li><a class="reference internal" href="#id8">Locally</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -269,9 +290,9 @@ Content on this topic
 <li class="toctree-l3"><a class="reference internal" href="../../ad-acevsecrdset-sl/software-guide/index.html">Software User Guide</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-12-2" id="toctree-collapse-12-2" checked=""/><div class="collapse"><a class="reference internal" href="../index.html">AD-APARD32690-SL</a><label for="toctree-collapse-12-2"><div class="icon"></div></label></div><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../ad-t1lusb-ebz/index.html">AD-T1LUSB2.0-EBZ</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">NINA-W102 Networking Support</a></li>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-12-2" id="toctree-collapse-12-2"/><div class="collapse"><a class="reference internal" href="../../ad-apard32690-sl/index.html">AD-APARD32690-SL</a><label for="toctree-collapse-12-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ad-apard32690-sl/ad-t1lusb-ebz/index.html">AD-T1LUSB2.0-EBZ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ad-apard32690-sl/nina-w102/index.html">NINA-W102 Networking Support</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-12-3" id="toctree-collapse-12-3"/><div class="collapse"><a class="reference internal" href="../../ad-bmse2e3w-sl/index.html">AD-BMSE2E3W-SL</a><label for="toctree-collapse-12-3"><div class="icon"></div></label></div><ul>
@@ -341,15 +362,15 @@ Content on this topic
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../adrd8012-01Z/index.html">ADRD8012-01Z</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../adxl355-pmdz/index.html">EVAL-ADXL355-PMDZ</a></li>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-12-14" id="toctree-collapse-12-14"/><div class="collapse"><a class="reference internal" href="../../eval-ad9081/index.html">AD9081 &amp; AD9082</a><label for="toctree-collapse-12-14"><div class="icon"></div></label></div><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../eval-ad9081/user-guide.html">User guide</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../eval-ad9081/prerequisites.html">Prerequisites</a></li>
-<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-12-14-1" id="toctree-collapse-12-14-1"/><div class="collapse"><a class="reference internal" href="../../eval-ad9081/quickstart/index.html">Quick start guides</a><label for="toctree-collapse-12-14-1"><div class="icon"></div></label></div><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../eval-ad9081/quickstart/a10soc.html">On A10SoC</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../eval-ad9081/quickstart/vck190.html">On VCK190</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../eval-ad9081/quickstart/zc706.html">On ZC706</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../eval-ad9081/quickstart/vcu118.html">On VCU118</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../eval-ad9081/quickstart/zcu102.html">On ZCU102</a></li>
+<li class="toctree-l2 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-12-14" id="toctree-collapse-12-14" checked=""/><div class="collapse"><a class="reference internal" href="../index.html">AD9081 &amp; AD9082</a><label for="toctree-collapse-12-14"><div class="icon"></div></label></div><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../user-guide.html">User guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l3 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-12-14-1" id="toctree-collapse-12-14-1" checked=""/><div class="collapse"><a class="reference internal" href="index.html">Quick start guides</a><label for="toctree-collapse-12-14-1"><div class="icon"></div></label></div><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="a10soc.html">On A10SoC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vck190.html">On VCK190</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zc706.html">On ZC706</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">On VCU118</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zcu102.html">On ZCU102</a></li>
 </ul>
 </li>
 </ul>
@@ -474,258 +495,381 @@ Content on this topic
       <div class="documentwrapper">
         <div class="bodywrapper" id="top-anchor">
           <div class="body-header">
-  <nav class="breadcrumb"><ol><li><a href="../../index.html">Reference Designs</a></li><li><a href="../index.html">AD-APARD32690-SL</a></li></ol></nav>
+  <nav class="breadcrumb"><ol><li><a href="../../index.html">Reference Designs</a></li><li><a href="../index.html">AD9081 &amp; AD9082</a></li><li><a href="index.html">Quick start guides</a></li></ol></nav>
 </div>
           <div class="body" role="main">
             
-  <section id="nina-w102-networking-support">
-<h1>NINA-W102 Networking Support<a class="headerlink" href="#nina-w102-networking-support" title="Link to this heading"></a></h1>
-<p>The following document describes how to build and flash firmware for boards with the NINA-W102 WiFi module. As an example, it will use the <a class="icon adi reference external" href="https://www.analog.com/AD-APARD32690-SL" target="_blank">MAX32690 Arduino Form-Factor Board</a>.
-It will also describe how to build and  flash the Zephyr Wifi sample to work with this board once the NINA-W102 has been flashed.</p>
-<p>Some familiarity with Zephyr and building / flashing Zephyr applications is assumed. If you are new to Zephyr, please start with the Getting Started Guide:
-<a class="icon link reference external" href="https://docs.zephyrproject.org/latest/develop/getting_started/index.html" target="_blank">https://docs.zephyrproject.org/latest/develop/getting_started/index.html</a></p>
-<section id="wifi">
-<h2>WiFi<a class="headerlink" href="#wifi" title="Link to this heading"></a></h2>
-<p>The wifi chip on the AD-APARD32690 is a uBlox NINA-W102 “Open CPU” Wifi/Bluetooth module.  The modules is based on an ESP32 chip, with “Open CPU” meaning it does NOT come preloaded with firmware from uBlox, but rather is intended for customers to develop their own firmware to run on it.</p>
-<p>Details of the chip: <a class="icon link reference external" href="https://www.u-blox.com/en/product/nina-w10-series-open-cpu" target="_blank">https://www.u-blox.com/en/product/nina-w10-series-open-cpu</a></p>
-<p>Software must be developed using the ESP32 SDK: <a class="icon link reference external" href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html" target="_blank">https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html</a></p>
-<p>Core ESP32 Device:  ESP32-D0WDQ6-V3</p>
-</section>
-<section id="pre-built-firmware-for-esp-nina-w102">
-<h2>Pre-Built Firmware for ESP NINA-W102<a class="headerlink" href="#pre-built-firmware-for-esp-nina-w102" title="Link to this heading"></a></h2>
-<p>ESP provides pre-built firmware for integrating Wifi and BLE through AT commands.  This can be found here: <a class="icon link reference external" href="https://www.espressif.com/en/products/sdks/esp-at/overview" target="_blank">https://www.espressif.com/en/products/sdks/esp-at/overview</a>. There is also a Zephyr driver for this firmware to make it look like generic Wifi here: <a class="icon link reference external" href="https://github.com/zephyrproject-rtos/zephyr/tree/main/drivers/wifi/esp_at" target="_blank">https://github.com/zephyrproject-rtos/zephyr/tree/main/drivers/wifi/esp_at</a> and a block talking about using the AT Firmware with Zephyr for a specific ESP32 module: <a class="icon link reference external" href="https://blog.golioth.io/esp32-esp-at-enables-connectivity-on-any-zephyr-project/" target="_blank">https://blog.golioth.io/esp32-esp-at-enables-connectivity-on-any-zephyr-project/</a>.</p>
-<p>However, the pre-built firmware is for ESP32 development boards which have a different pin out than the NINA-W102.  Instructions are provided (<a class="icon link reference external" href="https://docs.espressif.com/projects/esp-at/en/latest/esp32/Compile_and_Develop/How_to_set_AT_port_pin.html" target="_blank">https://docs.espressif.com/projects/esp-at/en/latest/esp32/Compile_and_Develop/How_to_set_AT_port_pin.html</a>) describing how to change the port pins for the firmware image.</p>
-</section>
-<section id="building-nina-w102-firmware">
-<h2>Building NINA-W102 Firmware<a class="headerlink" href="#building-nina-w102-firmware" title="Link to this heading"></a></h2>
-<p>Before proceeding, ensure that P50 and P55 on the APARD32690 board are in position 1-2 if you are trying to get the NINA-W102 UART data through the SWD connector. Be sure to switch this back later for testing the Zephyr application.</p>
-<p>The following instructions mostly come from this document:
-<a class="icon link reference external" href="https://docs.espressif.com/projects/esp-at/en/latest/esp32/Compile_and_Develop/How_to_clone_project_and_compile_it.html" target="_blank">https://docs.espressif.com/projects/esp-at/en/latest/esp32/Compile_and_Develop/How_to_clone_project_and_compile_it.html</a></p>
-<p>Install the ESP SDK: <a class="icon link reference external" href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html" target="_blank">https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html</a></p>
-<p>Open the ESP-IDF Command Prompt and run the following steps:</p>
-<ol class="arabic">
-<li><p>Get the project:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>--recursive<span class="w"> </span>https://github.com/espressif/esp-at.git
-</pre></div>
-</div>
-</li>
-<li><dl class="simple">
-<dt>Run the builder:  python build.py install</dt><dd><ul class="simple">
-<li><p>Select PLATFORM_ESP32</p></li>
-<li><p>Select module ESP32-D2WD as it has the same flash size as the NINA-W102, making it easier to configure</p></li>
-<li><p>When asked about silent mode, select Y.  Otherwise, if silent mode is not enable, you’ll need to set the compiler options later to Optimize for Size to get it to fit</p></li>
+  <section id="vcu118-quick-start">
+<span id="ad9081-quickstart-vcu118"></span><h1>VCU118 Quick start<a class="headerlink" href="#vcu118-quick-start" title="Link to this heading"></a></h1>
+<p>This guide provides quick instructions on how to setup the
+<a class="icon adi reference external" href="https://www.analog.com/EVAL-AD9081" target="_blank">EVAL-AD9081</a> / <a class="icon adi reference external" href="https://www.analog.com/EVAL-AD9082" target="_blank">EVAL-AD9082</a> on:</p>
+<ul class="simple">
+<li><p><a class="icon link reference external" href="https://www.xilinx.com/VCU118" target="_blank">VCU118</a> FMC+</p></li>
 </ul>
-</dd>
-</dl>
-</li>
-<li><dl>
-<dt>Edit the components/customized_partitions/raw_data/factory_param_data.csv file so the D2WD line reads the following:</dt><dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PLATFORM_ESP32</span><span class="p">,</span><span class="n">ESP32</span><span class="o">-</span><span class="n">D2WD</span><span class="p">,</span><span class="s2">&quot;2MB flash, No OTA&quot;</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="n">CN</span><span class="p">,</span><span class="mi">115200</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span>
-</pre></div>
+<a class="reference internal image-reference" href="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/vcu118.png"><img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/vcu118.png" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/vcu118.png" width="900" />
+</a>
+<div><div class="esd-warning docutils container">
+<div class="icon"></div><p>All the products described on this page include ESD (electrostatic discharge) sensitive devices. Electrostatic charges as high as 4000V readily accumulate on the human body or test equipment and can discharge without detection.
+Although the boards feature ESD protection circuitry, permanent damage may occur on devices subjected to high-energy electrostatic discharges. Therefore, proper ESD precautions are recommended to avoid performance degradation or loss of functionality. This includes removing static charge on external equipment, cables, or antennas before connecting to the device. </p>
 </div>
-</dd>
-</dl>
-</li>
-<li><p>Build the project by running python build.py build</p></li>
-<li><p>The complete firmware image is located in buildfactoryfactory_ESP32-&lt;device&gt;.bin and can be archived for later loading of devices.</p></li>
-</ol>
+</div><section id="using-linux-as-software">
+<h2>Using Linux as software<a class="headerlink" href="#using-linux-as-software" title="Link to this heading"></a></h2>
+<section id="necessary-files">
+<h3>Necessary files<a class="headerlink" href="#necessary-files" title="Link to this heading"></a></h3>
+<p>The following files are needed for the system to boot:</p>
+<ul class="simple">
+<li><p>HDL boot image: <code class="docutils literal notranslate"><span class="pre">BOOT.BIN</span></code></p></li>
+<li><p>Linux Kernel image: <code class="docutils literal notranslate"><span class="pre">Image</span></code></p></li>
+<li><p>Linux device tree: <code class="docutils literal notranslate"><span class="pre">system.dtb</span></code></p></li>
+</ul>
+<p>They can either be taken from the SD card – already generated by us, or you
+can build them manually.</p>
+<p>In the following sections, we explain <strong>how to take them from the SD card</strong>.</p>
+<p>Instructions on how to manually build the boot files from source can be found
+here:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../../../linux/kernel/microblaze.html#linux-kernel-microblaze"><span class="std std-ref">Build MicroBlaze Linux kernel</span></a></p></li>
+<li><p><a class="icon link reference external" href="https://analogdevicesinc.github.io/hdl/projects/ad9081_fmca_ebz/index.html#ad9081-fmca-ebz" target="_blank" title="(in HDL)"><span>AD9081/AD9082/AD9986/AD9988 HDL project</span></a> build documentation. More HDL build
+details at <a class="icon link reference external" href="https://analogdevicesinc.github.io/hdl/user_guide/build_hdl.html#build-hdl" target="_blank" title="(in HDL)"><span>Build an HDL project</span></a>.</p></li>
+</ul>
 </section>
-<section id="programming-the-nina-w102-on-ad-apard32690">
-<h2>Programming the NINA-W102 on AD-APARD32690<a class="headerlink" href="#programming-the-nina-w102-on-ad-apard32690" title="Link to this heading"></a></h2>
-<p>A USB-UART adapter will be needed. A good one can be found here if needed:
-<a class="icon link reference external" href="https://ftdichip.com/products/ttl-232r-3v3/" target="_blank">https://ftdichip.com/products/ttl-232r-3v3/</a></p>
-<ol class="arabic">
-<li><p>Connect a USB-UART adapter to the NINA-W102 through P38-2 and P56-2, and a ground on P2 or P5</p></li>
-<li><p>Prior to powering up the board, pull the ESP32 SYS_BOOT pin low, but connecting P47 to ground</p></li>
-<li><p>Power up the board.  You can verify the bootloader started correctly by observing the USB-UART adapter in a terminal.  There should be text similar to the following:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>rst:0x1 (POWERON_RESET),boot:0x23 (DOWNLOAD_BOOT(UART0/UART1/SDIO_REI_REO_V2))
-waiting for download
-</pre></div>
-</div>
-</li>
-</ol>
-<p>4. From the ESP command line, run <code class="code docutils literal notranslate"><span class="pre">python</span> <span class="pre">build.py</span> <span class="pre">-p</span> <span class="pre">&lt;COMPORT&gt;</span> <span class="pre">flash</span></code>. The flash operation should be performed
-Depending on the integrity of the cables (bad jumper wires, etc), you may be have to add the -b 115200 forced slower baud rate for data integrity.</p>
+<section id="required-software">
+<h3>Required Software<a class="headerlink" href="#required-software" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>SD Card 16GB imaged with <a class="icon link reference external" href="https://analogdevicesinc.github.io/adi-kuiper-gen/index.html" target="_blank" title="(in Kuiper latest)"><span class="xref std std-doc">Kuiper</span></a>
+(check out that guide on how to do it, then come back to this section)</p></li>
+<li><p>A UART terminal (Putty/Tera Term/Minicom, etc.) with baud rate 115200 (8N1)</p></li>
+</ul>
 </section>
-<section id="standalone-programming">
-<h2>Standalone Programming<a class="headerlink" href="#standalone-programming" title="Link to this heading"></a></h2>
-<p>The NINA-W102 device may be flashed using the stand alone ESP Flash download tool without needing to install the full SDK.</p>
-<p>Follow the instructions in the previous section up through step 3, then consult the ESP-AT Downloading guide for using the Flash Download Tool on Windows. Selecting the combined factory firmware image, as described above.
-<a class="icon link reference external" href="https://docs.espressif.com/projects/esp-at/en/latest/esp32/Get_Started/Downloading_guide.html#flash-at-firmware-into-your-device" target="_blank">https://docs.espressif.com/projects/esp-at/en/latest/esp32/Get_Started/Downloading_guide.html#flash-at-firmware-into-your-device</a></p>
-</section>
-<section id="at-command-verification">
-<h2>AT Command Verification<a class="headerlink" href="#at-command-verification" title="Link to this heading"></a></h2>
-<p>The AT command set can be found here: <a class="icon link reference external" href="https://docs.espressif.com/projects/esp-at/en/latest/esp32/AT_Command_Set/index.html" target="_blank">https://docs.espressif.com/projects/esp-at/en/latest/esp32/AT_Command_Set/index.html</a>.  Some basic AT commands can be done to verify the part is programmed correctly:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AT</span>
-
-<span class="n">OK</span>
-<span class="n">AT</span><span class="o">+</span><span class="n">GMR</span>
-<span class="n">AT</span> <span class="n">version</span><span class="p">:</span><span class="mf">4.1.0.0</span><span class="o">-</span><span class="n">dev</span><span class="p">(</span><span class="n">eb730f6</span> <span class="o">-</span> <span class="n">ESP32</span> <span class="o">-</span> <span class="n">Jan</span>  <span class="mi">3</span> <span class="mi">2024</span> <span class="mi">08</span><span class="p">:</span><span class="mi">18</span><span class="p">:</span><span class="mi">49</span><span class="p">)</span>
-<span class="n">SDK</span> <span class="n">version</span><span class="p">:</span><span class="n">v5</span><span class="mf">.0.4</span><span class="o">-</span><span class="n">dirty</span>
-<span class="nb">compile</span> <span class="n">time</span><span class="p">(</span><span class="mi">899230</span><span class="n">b2</span><span class="p">):</span><span class="n">Jan</span> <span class="mi">14</span> <span class="mi">2024</span> <span class="mi">17</span><span class="p">:</span><span class="mi">16</span><span class="p">:</span><span class="mi">03</span>
-<span class="n">Bin</span> <span class="n">version</span><span class="p">:</span><span class="n">v3</span><span class="mf">.2.0.0</span><span class="p">(</span><span class="n">ESP32</span><span class="o">-</span><span class="n">D2WD</span><span class="p">)</span>
-
-<span class="n">OK</span>
-<span class="n">AT</span><span class="o">+</span><span class="n">CWINIT</span><span class="o">=</span><span class="mi">1</span>
-
-<span class="n">OK</span>
-<span class="n">AT</span><span class="o">+</span><span class="n">CWMODE</span><span class="o">=</span><span class="mi">1</span>
-
-<span class="n">OK</span>
-<span class="n">AT</span><span class="o">+</span><span class="n">CWLAP</span>
-<span class="o">+</span><span class="n">CWLAP</span><span class="p">:(</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;MySSID&quot;</span><span class="p">,</span><span class="o">-</span><span class="mi">74</span><span class="p">,</span><span class="s2">&quot;94:a6:7e:e3:b8:38&quot;</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">OK</span>
-</pre></div>
-</div>
-<p>Finished code block</p>
-</section>
-<section id="integrating-into-zephyr">
-<h2>Integrating Into Zephyr<a class="headerlink" href="#integrating-into-zephyr" title="Link to this heading"></a></h2>
-<p>Create files in your Zephyr workspace called <cite>apard_wifi.conf</cite> and <cite>apard_wifi.overlay</cite>.</p>
-<p>Next, place the text below in these files:</p>
-<section id="apard-wifi-overlay">
-<h3>apard_wifi.overlay<a class="headerlink" href="#apard-wifi-overlay" title="Link to this heading"></a></h3>
-<div class="highlight-dts notranslate" id="id1"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="na">uart2</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">pinctrl-0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;&amp;</span><span class="na">uart2a_tx_p1_10</span><span class="w"> </span><span class="o">&amp;</span><span class="na">uart2a_rx_p1_9</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="w">    </span><span class="n">pinctrl-names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;default&quot;</span><span class="p">;</span>
-<span class="w">    </span><span class="n">current-speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">115200</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="w">    </span><span class="kr">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;okay&quot;</span><span class="p">;</span>
-
-<span class="w">    </span><span class="nl">esp_wifi</span><span class="p">:</span><span class="w"> </span><span class="nf">esp-wifi</span><span class="cm"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kr">compatible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;espressif,esp-at&quot;</span><span class="p">;</span>
-<span class="w">        </span><span class="kr">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;okay&quot;</span><span class="p">;</span>
-<span class="w">    </span><span class="p">};</span>
-<span class="p">};</span>
-
-<span class="nf">/</span><span class="cm"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nf">aliases</span><span class="cm"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">wifi0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">esp_wifi</span><span class="p">;</span>
-<span class="w">    </span><span class="p">};</span>
-<span class="p">};</span>
-</pre></div>
-</div>
-</section>
-<section id="apard-wifi-conf">
-<h3>apard_wifi.conf<a class="headerlink" href="#apard-wifi-conf" title="Link to this heading"></a></h3>
-<div class="highlight-default notranslate" id="id2"><div class="highlight"><pre><span></span><span class="c1"># Enable WiFi via ESP-AT</span>
-<span class="n">CONFIG_WIFI</span><span class="o">=</span><span class="n">y</span>
-<span class="n">CONFIG_WIFI_ESP_AT</span><span class="o">=</span><span class="n">y</span>
-<span class="n">CONFIG_WIFI_ESP_AT_MDM_RX_BUF_COUNT</span><span class="o">=</span><span class="mi">40</span>
-
-<span class="c1"># Disable NET_L2_ETHERNET to avoid T1L PHY errors</span>
-<span class="c1"># when not using T1L, but enabling net-if</span>
-<span class="n">CONFIG_NET_L2_ETHERNET</span><span class="o">=</span><span class="n">n</span>
-
-<span class="c1"># Increment max IPV4 count if using multiple net-if interfaces</span>
-<span class="n">CONFIG_NET_IF_MAX_IPV4_COUNT</span><span class="o">=</span><span class="mi">2</span>
-</pre></div>
-</div>
-<p>Build your application as below:</p>
-<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
-</pre></div>
-</div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>west<span class="w"> </span>build<span class="w"> </span>-p<span class="w"> </span>auto<span class="w"> </span>-b<span class="w"> </span>apard32690//m4<span class="w"> </span>zephyr/samples/net/wifi/shell<span class="w"> </span>--<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-DDTC_OVERLAY_FILE<span class="o">=</span><span class="nv">$PWD</span>/apard_wifi.overlay<span class="w"> </span>-DEXTRA_CONF_FILE<span class="o">=</span><span class="nv">$PWD</span>/apard_wifi.conf
-</pre></div>
-</div>
-<div class="clear-left"></div></div></div><p>Flash the application using a Segger JLink as below:</p>
-<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>$
-</pre></div>
-</div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>west<span class="w"> </span>flash<span class="w"> </span>-r<span class="w"> </span>jlink
-</pre></div>
-</div>
-<div class="clear-left"></div></div></div><p>At this point, make sure that P55 and P50 on the APARD32690 board are in positions 2-3 to get UART data from the MAX32690.</p>
-</section>
+<section id="required-hardware">
+<h3>Required Hardware<a class="headerlink" href="#required-hardware" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>AMD Xilinx <a class="icon link reference external" href="https://www.xilinx.com/VCU118" target="_blank">VCU118</a> Rev 1.0 or later FPGA board and its power supply</p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/EVAL-AD9081" target="_blank">EVAL-AD9081</a> / <a class="icon adi reference external" href="https://www.analog.com/EVAL-AD9082" target="_blank">EVAL-AD9082</a> FMC evaluation board</p></li>
+<li><p>SD card with at least 16GB of memory</p></li>
+<li><p>2 x Micro-USB cable</p></li>
+<li><p>LAN cable (Ethernet)</p></li>
+<li><p>Signal generator</p></li>
+<li><p>4x SMA cables</p></li>
+<li><p>(Optional) USB keyboard &amp; mouse and a HDMI compatible monitor</p></li>
+<li><p>(Optional) 4 way splitter</p></li>
+</ul>
+<p>More details as to why you need these, can be found at
+<a class="reference internal" href="../prerequisites.html#ad9081-prerequisites"><span class="std std-ref">Prerequisites</span></a>.</p>
 </section>
 <section id="testing">
-<h2>Testing<a class="headerlink" href="#testing" title="Link to this heading"></a></h2>
-<p>At this point, make sure that P55 and P50 on the APARD32690 board are in positions 2-3 to get UART data from the MAX32690. Connect to a terminal application with 115200 baud, 8-N-1 UART settings. Make sure that P56 and P38 are also connected.
-The Zephyr Wifi sample application comes with a Wifi shell for doing basic Wifi interactions.  After launching the scan, and connect commands were used to successfully connect to an AP via the Zephyr network subsystem.</p>
-<p>Verify the devices installed with <cite>device list</cite>:</p>
-<div class="code-shell"><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>*** Booting Zephyr OS build zephyr-v3.5.0-4086-g0a8d03b95f84 ***
-</pre></div>
-</div>
-<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
-</pre></div>
-</div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>device<span class="w"> </span>list
-</pre></div>
-</div>
-<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>devices:
-- rcc@40021000 (READY)
-- reset-controller (READY)
-- interrupt-controller@40010400 (READY)
-- gpio@48001800 (READY)
-- gpio@48001400 (READY)
-- gpio@48001000 (READY)
-- gpio@48000c00 (READY)
-- gpio@48000800 (READY)
-- gpio@48000400 (READY)
-- gpio@48000000 (READY)
-- rng@50060800 (READY)
-- serial@40008000 (READY)
-- serial@40013800 (READY)
-- esp-wifi (READY)
-</pre></div>
-</div>
-<div class="clear-left"></div></div></div><p>Request a wifi scan with wifi scan:</p>
-<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
-</pre></div>
-</div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wifi<span class="w"> </span>scan
-</pre></div>
-</div>
-<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>Scan requested
+<h3>Testing<a class="headerlink" href="#testing" title="Link to this heading"></a></h3>
+<section id="creating-the-setup">
+<h4>Creating the setup<a class="headerlink" href="#creating-the-setup" title="Link to this heading"></a></h4>
+<a class="reference internal image-reference" href="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/ad9081_vcu118_setup.png"><img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/ad9081_vcu118_setup.png" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/ad9081_vcu118_setup.png" width="800" />
+</a>
+<p>In the following example, we will make a physical loopback between the ADC
+and the DAC channels on the evaluation board, using SMA cables.</p>
+<p>Follow the steps in this order, to avoid damaging the components:</p>
+<ol class="arabic simple">
+<li><p>Connect the SMA cables ADC0-DAC0, ADC1-DAC1, ADC2-DAC2, ADC3-DAC3</p></li>
+<li><p>Connect the <a class="icon adi reference external" href="https://www.analog.com/EVAL-AD9081" target="_blank">EVAL-AD9081</a> / <a class="icon adi reference external" href="https://www.analog.com/EVAL-AD9082" target="_blank">EVAL-AD9082</a> FMC board to the VCU118
+<strong>FMC+</strong> socket</p></li>
+<li><p>Insert SD card into the SD card socket on the FPGA</p></li>
+<li><p>Configure <a class="icon link reference external" href="https://www.xilinx.com/VCU118" target="_blank">VCU118</a> for SD card boot mode (mode SW6[3:1] switch in
+the position <strong>1: Down, 2: Down, 3: Up, 4: Up</strong> )</p></li>
+<li><p>Plug-in an Ethernet cable from your router/switch to the Ethernet port on
+the FPGA board</p></li>
+<li><p>Connect USB UART (Micro-USB) to your host PC</p></li>
+<li><p>(Optional) Connect a monitor to the FPGA by HDMI, and a mouse and a keyboard</p></li>
+<li><p>Connect the power supply for the FPGA</p></li>
+<li><p>Turn on the power switch on the FPGA board</p></li>
+<li><p>Observe Kernel and serial console output messages on your terminal (use
+the first ttyUSB or COM port registered)</p></li>
+</ol>
+</section>
+<section id="boot-messages">
+<h4>Boot messages<a class="headerlink" href="#boot-messages" title="Link to this heading"></a></h4>
+<p>The following is what is printed in the serial console, after you have
+connected to the proper ttyUSB or COM port:</p>
+<div><div class="collapsible docutils container">
+<input class="collapsible_input" id="868dd67685651adccdb0a0e8a863d5cce8aeb2de" name="868dd67685651adccdb0a0e8a863d5cce8aeb2de" type="checkbox"></input><label for="868dd67685651adccdb0a0e8a863d5cce8aeb2de"><p>Complete boot log</p>
+<div class="icon"></div></label><div class="collapsible_content docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">U</span><span class="o">-</span><span class="n">Boot</span> <span class="mf">2018.01</span><span class="o">-</span><span class="mi">21442</span><span class="o">-</span><span class="n">gf06dec3cab</span> <span class="p">(</span><span class="n">Nov</span> <span class="mi">10</span> <span class="mi">2023</span> <span class="o">-</span> <span class="mi">16</span><span class="p">:</span><span class="mi">08</span><span class="p">:</span><span class="mi">56</span> <span class="o">+</span><span class="mi">0200</span><span class="p">)</span> <span class="n">Xilinx</span> <span class="n">ZynqMP</span> <span class="n">VCU118</span> <span class="n">revA</span><span class="p">,</span> <span class="n">Build</span><span class="p">:</span> <span class="n">jenkins</span><span class="o">-</span><span class="n">development</span><span class="o">-</span><span class="n">build_uboot</span><span class="o">-</span><span class="mi">6</span>
 
-Num  | SSID         (len) | Chan (Band)   | RSSI | Security  | BSSID | MFP
-1    | MySSID       9     | 10   (2.4GHz) | -70  | WPA2-PSK  |       | Disable
-Scan request done
+<span class="n">I2C</span><span class="p">:</span>   <span class="n">ready</span>
+<span class="n">DRAM</span><span class="p">:</span>  <span class="mi">4</span> <span class="n">GiB</span>
 </pre></div>
 </div>
-<div class="clear-left"></div></div></div><p>Connect to a Wifi Access Point with <cite>wifi connect</cite>.  Note PSK was omitted in the following terminal log:</p>
+</div>
+</div>
+</div></section>
+<section id="useful-commands-for-the-serial-terminal">
+<h4>Useful commands for the serial terminal<a class="headerlink" href="#useful-commands-for-the-serial-terminal" title="Link to this heading"></a></h4>
+<p>The below commands are to be run in the serial terminal connected to the FPGA.</p>
+<p>To find out the IP of the FPGA board, run the following command and take the
+IP specified at “eth0 inet”:</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wifi<span class="w"> </span>connect<span class="w"> </span><span class="s2">&quot;MySSID&quot;</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>****PSK<span class="w"> </span>HERE****
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ifconfig
 </pre></div>
 </div>
-<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>Connection requested
-Connected
-</pre></div>
-</div>
-<div class="clear-left"></div></div></div><p>Get status information with <cite>wifi status</cite>:</p>
+<div class="clear-left"></div></div></div><p>To see the IIO devices detected, run:</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wifi<span class="w"> </span>status
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>iio_info<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>iio:device
 </pre></div>
 </div>
-<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>Status: successful
-==================
-State: COMPLETED
-Interface Mode: STATION
-Link Mode: UNKNOWN
-SSID: MySSID
-BSSID: &lt;__:__:__:__:__:__&gt;
-Band: 2.4GHz
-Channel: 10
-Security: UNKNOWN
-MFP: UNKNOWN
-RSSI: -69
-Beacon Interval: 0
-DTIM: 0
-TWT: Not supported
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>    iio:device0: hmc7044
+    iio:device1: axi-ad9081-tx-hpc (buffer capable)
+    iio:device2: axi-ad9081-rx-hpc (buffer capable)
 </pre></div>
 </div>
-<div class="clear-left"></div></div></div></section>
+<div class="clear-left"></div></div></div><p>To see the EEPROM specifications, run:</p>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fru-dump<span class="w"> </span>-b<span class="w"> </span>/sys/bus/i2c/devices/15-0050/eeprom
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div><p>To use the <a class="icon dokuwiki reference external" href="https://wiki.analog.com/resources/tools-software/linux-software/jesd_status" target="_blank">JESD204 status utility</a>,
+run:</p>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jesd_status
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div><p>All links should be in DATA without errors:</p>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jesd_status<span class="w"> </span>-s
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>(DEVICES) Found 2 JESD204 Link Layer peripherals
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>(0): axi-jesd204-rx/44a90000.axi-jesd204-rx  [*]
+(1): axi-jesd204-tx/44b90000.axi-jesd204-tx
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>(STATUS)
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>Link is                      enabled
+Link Status                  DATA
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>Measured Link Clock (MHz)    249.998
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>Reported Link Clock (MHz)    250.000
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>Measured Device Clock (MHz)  250.000
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>Reported Device Clock (MHz)  250.000
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>Desired Device Clock (MHz)   250.000
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>Lane rate (MHz)              10000.000
+Lane rate / 40 (MHz)         250.000
+LMFC rate (MHz)              7.812
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>SYSREF captured              Yes
+SYSREF alignment error       No
+SYNC~
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>(LANE STATUS)
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>Lane#                             0      1      2      3
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>Errors                            0      0      0      0
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>Latency (Multiframes/Octets)      1/22   1/20   1/25   1/21
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>CGS State                         DATA   DATA   DATA   DATA
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span>Initial Frame Sync                Yes    Yes    Yes    Yes
+Initial Lane Alignment Sequence   Yes    Yes    Yes    Yes
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div><p>To power off the system, run the following command, and wait for the final
+message to be printed, then power off the FPGA board from the switch as well.</p>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poweroff
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div><p>To reboot the system, run:</p>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>reboot
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div><div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Even thought this is Linux, this is a persistent file systems. Care should
+be taken not to corrupt the file system – please shut down things, don’t
+just turn off the power switch. Depending on your monitor, the standard
+power off could be hiding. You can do this from the terminal as well with
+<code class="code docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">shutdown</span> <span class="pre">-h</span> <span class="pre">now</span></code> or the above-mentioned command for powering
+off.</p>
+</div>
+</section>
+</section>
+<section id="adi-iio-oscilloscope">
+<h3>ADI IIO Oscilloscope<a class="headerlink" href="#adi-iio-oscilloscope" title="Link to this heading"></a></h3>
+<p>You can connect to <a class="reference internal" href="../../../../software/iio-oscilloscope/index.html#iio-oscilloscope"><span class="std std-ref">IIO Oscilloscope</span></a> either remotely, or locally.</p>
+<section id="remote">
+<h4>Remote<a class="headerlink" href="#remote" title="Link to this heading"></a></h4>
+<p>The <a class="reference internal" href="../../../../software/iio-oscilloscope/index.html#iio-oscilloscope"><span class="std std-ref">IIO Oscilloscope</span></a> application can be used to connect to another
+platform that has a connected device, to configure the device and read data
+from it. This application is not for performance testing, but rather
+showcasing the basic features.</p>
+<p>Please see <a class="reference internal" href="../../../../software/iio-oscilloscope/index.html#iio-oscilloscope"><span class="std std-ref">IIO Oscilloscope documentation</span></a> for
+installation steps and more details.</p>
+<p>Build and start <code class="docutils literal notranslate"><span class="pre">osc</span></code> on a network-enabled Linux host.
+For Windows computers, open the application from the start menu.</p>
+<p>Once the application is launched, go to Settings &gt; Connect &gt; URI and type
+“ip:” then the IP address of the target in the pop-up window. This IP can
+be found out with a command from the previous section of this documentation.</p>
+</section>
+<section id="locally">
+<h4>Locally<a class="headerlink" href="#locally" title="Link to this heading"></a></h4>
+<p>If you connected an HDMI monitor to your FPGA and a mouse and a keyboard
+(both on one dongle), you can navigate the ADI Kuiper Linux that is on the FPGA.</p>
+<p>Going to the top left corner icon (the menu icon), search for IIO Oscilloscope.
+Opening it will automatically connect to the setup and you can use the
+application.</p>
+</section>
+</section>
+</section>
+<section id="using-no-os-as-software">
+<h2>Using no-OS as software<a class="headerlink" href="#using-no-os-as-software" title="Link to this heading"></a></h2>
+<section id="id1">
+<h3>Necessary files<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<p>The following files are needed for the system to boot:</p>
+<ul class="simple">
+<li><p>HDL boot file: <code class="docutils literal notranslate"><span class="pre">system_top.xsa</span></code></p></li>
+<li><p>no-OS project: <a class="icon git reference external" href="https://github.com/analogdevicesinc/no-OS/tree/main/projects/ad9081" target="_blank">projects/ad9081</a></p></li>
+</ul>
+<p>Instructions on how to build the boot files from source can be found here:</p>
+<ul class="simple">
+<li><p><a class="icon link reference external" href="https://analogdevicesinc.github.io/no-OS/projects/adc/ad9081.html" target="_blank" title="(in no-OS)"><span>ad9081 no-OS Example Project</span></a>. More no-OS build
+details at <a class="icon link reference external" href="https://analogdevicesinc.github.io/no-OS/build_guide.html" target="_blank" title="(in no-OS)"><span>No-OS Build Guide</span></a>.</p></li>
+<li><p><a class="icon link reference external" href="https://analogdevicesinc.github.io/hdl/projects/ad9081_fmca_ebz/index.html#ad9081-fmca-ebz" target="_blank" title="(in HDL)"><span>AD9081/AD9082/AD9986/AD9988 HDL project</span></a>. More HDL build details at
+<a class="icon link reference external" href="https://analogdevicesinc.github.io/hdl/user_guide/build_hdl.html#build-hdl" target="_blank" title="(in HDL)"><span>Build an HDL project</span></a>.</p></li>
+</ul>
+</section>
+<section id="id2">
+<h3>Required Software<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>AMD Xilinx Vivado and Vitis (downloading Vitis from
+<a class="icon link reference external" href="https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis.html" target="_blank">here</a>
+will include Vivado as well)</p></li>
+<li><p>An UART terminal (Putty/Tera Term/Minicom, etc.), Baud rate 115200 (8N1)</p></li>
+</ul>
+</section>
+<section id="id3">
+<h3>Required Hardware<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>AMD Xilinx <a class="icon link reference external" href="https://www.xilinx.com/VCU118" target="_blank">VCU118</a> Rev 1.0 or later FPGA board and its power supply</p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/EVAL-AD9081" target="_blank">EVAL-AD9081</a> / <a class="icon adi reference external" href="https://www.analog.com/EVAL-AD9082" target="_blank">EVAL-AD9082</a> FMC evaluation board</p></li>
+<li><p>2x Micro-USB cables, one for UART and one for JTAG</p></li>
+<li><p>(Optional) USB keyboard &amp; mouse and a HDMI-compatible monitor</p></li>
+</ul>
+<p>More details as to why you need these, can be found at
+<a class="reference internal" href="../prerequisites.html#ad9081-prerequisites"><span class="std std-ref">Prerequisites</span></a>.</p>
+</section>
+<section id="id4">
+<h3>Testing<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<section id="id5">
+<h4>Creating the setup<a class="headerlink" href="#id5" title="Link to this heading"></a></h4>
+<a class="reference internal image-reference" href="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/ad9081_vcu118_setup.png"><img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/ad9081_vcu118_setup.png" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/ad9081_vcu118_setup.png" width="800" />
+</a>
+<p>Follow the steps in this order, to avoid damaging the components:</p>
+<ol class="arabic simple">
+<li><p>Connect the <a class="icon adi reference external" href="https://www.analog.com/EVAL-AD9081" target="_blank">EVAL-AD9081</a> / <a class="icon adi reference external" href="https://www.analog.com/EVAL-AD9082" target="_blank">EVAL-AD9082</a> FMC board to the VCU118
+<strong>FMC+</strong> socket</p></li>
+<li><p>Configure <a class="icon link reference external" href="https://www.xilinx.com/VCU118" target="_blank">VCU118</a> for SD card boot mode (mode SW6[3:1] switch in
+the position <strong>1: Down, 2: Down, 3: Up, 4: Up</strong> )</p></li>
+<li><p>Connect USB UART (Micro-USB) to your host PC</p></li>
+<li><p>Connect USB JTAG (Micro-USB) to your host PC</p></li>
+<li><p>(Optional) Connect a monitor to the FPGA by HDMI, and a mouse and a keyboard</p></li>
+<li><p>Turn on the power switch on the FPGA board</p></li>
+<li><p>Observe console output messages on your terminal (use the first ttyUSB or
+COM port registered)</p></li>
+</ol>
+</section>
+<section id="console-output">
+<h4>Console output<a class="headerlink" href="#console-output" title="Link to this heading"></a></h4>
+<p>The following is what is printed in the serial console, after you have
+connected to the proper ttyUSB or COM port:</p>
+<div><div class="collapsible docutils container">
+<input class="collapsible_input" id="78d2bb751e292b0bb5585631c282527f3036de88" name="78d2bb751e292b0bb5585631c282527f3036de88" type="checkbox"></input><label for="78d2bb751e292b0bb5585631c282527f3036de88"><p>Complete boot log</p>
+<div class="icon"></div></label><div class="collapsible_content docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Xilinx</span> <span class="n">Microblaze</span> <span class="n">First</span> <span class="n">Stage</span> <span class="n">Boot</span> <span class="n">Loader</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div></section>
+</section>
+<section id="id6">
+<h3>ADI IIO Oscilloscope<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<p>You can connect to <a class="reference internal" href="../../../../software/iio-oscilloscope/index.html#iio-oscilloscope"><span class="std std-ref">IIO Oscilloscope</span></a> either remotely, or locally.</p>
+<section id="id7">
+<h4>Remote<a class="headerlink" href="#id7" title="Link to this heading"></a></h4>
+<p>The <a class="reference internal" href="../../../../software/iio-oscilloscope/index.html#iio-oscilloscope"><span class="std std-ref">IIO Oscilloscope</span></a> application can be used to connect to another
+platform that has a connected device, to configure the device and read data
+from it. This application is not for performance testing, but rather
+showcasing the basic features.</p>
+<p>Please see <a class="reference internal" href="../../../../software/iio-oscilloscope/index.html#iio-oscilloscope"><span class="std std-ref">IIO Oscilloscope documentation</span></a> for
+installation steps and more details.</p>
+<p>Build and start <code class="docutils literal notranslate"><span class="pre">osc</span></code> on a network-enabled Linux host.
+For Windows computers, open the application from the start menu.</p>
+<p>Once the application is launched, go to Settings &gt; Connect &gt; URI and type
+“ip:” then the IP address of the target in the pop-up window. This IP can
+be found out with a command from the previous section of this documentation.</p>
+</section>
+<section id="id8">
+<h4>Locally<a class="headerlink" href="#id8" title="Link to this heading"></a></h4>
+<p>If you connected an HDMI monitor to your FPGA and a mouse and a keyboard
+(both on one dongle), you can navigate the ADI Kuiper Linux that is on the FPGA.</p>
+<p>Going to the top left corner icon (the menu icon), search for IIO Oscilloscope.
+Opening it will automatically connect to the setup and you can use the
+application.</p>
+</section>
+</section>
+</section>
 </section>
 
 
           </div>
               <div class="related">
                 &nbsp;
-    <a href="../ad-t1lusb-ebz/index.html" title="Previous document (Alt+Shift+LeftArrow)" class="prev">AD-T1LUSB2.0-EBZ</a>
-    <a href="../../ad-bmse2e3w-sl/index.html" title="Next document (Alt+Shift+RightArrow)" class="next">AD-BMSE2E3W-SL</a>
+    <a href="zc706.html" title="Previous document (Alt+Shift+LeftArrow)" class="prev">ZC706 Quick start</a>
+    <a href="zcu102.html" title="Next document (Alt+Shift+RightArrow)" class="next">ZCU102 Quick start</a>
               </div>
           
         </div>

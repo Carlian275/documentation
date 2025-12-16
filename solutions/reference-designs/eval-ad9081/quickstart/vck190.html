@@ -13,7 +13,7 @@
     <link rel="icon" href="../../../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="ZCU102 Quick start" href="zynqmp.html" />
+    <link rel="next" title="ZC706 Quick start" href="zc706.html" />
     <link rel="prev" title="Arria 10 SoC Quick start" href="a10soc.html" />
    
   
@@ -101,18 +101,15 @@
 <li><a class="reference internal" href="#required-hardware">Required Hardware</a></li>
 <li><a class="reference internal" href="#testing">Testing</a><ul>
 <li><a class="reference internal" href="#creating-the-setup">Creating the setup</a></li>
-</ul>
-</li>
 <li><a class="reference internal" href="#acap-sd-card-boot-files">ACAP SD card boot files</a></li>
 <li><a class="reference internal" href="#setting-up-uart">Setting up UART</a></li>
-<li><a class="reference internal" href="#boot-messages">Boot messages</a><ul>
+<li><a class="reference internal" href="#boot-messages">Boot messages</a></li>
 <li><a class="reference internal" href="#useful-commands-for-the-serial-terminal">Useful commands for the serial terminal</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#adi-iio-oscilloscope">ADI IIO Oscilloscope</a><ul>
 <li><a class="reference internal" href="#remote">Remote</a></li>
 <li><a class="reference internal" href="#locally">Locally</a></li>
-<li><a class="reference internal" href="#about-the-iio-devices">About the IIO devices</a></li>
 </ul>
 </li>
 </ul>
@@ -357,7 +354,9 @@ Content on this topic
 <li class="toctree-l3 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-12-14-1" id="toctree-collapse-12-14-1" checked=""/><div class="collapse"><a class="reference internal" href="index.html">Quick start guides</a><label for="toctree-collapse-12-14-1"><div class="icon"></div></label></div><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="a10soc.html">On A10SoC</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">On VCK190</a></li>
-<li class="toctree-l4"><a class="reference internal" href="zynqmp.html">On ZCU102</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zc706.html">On ZC706</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vcu118.html">On VCU118</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zcu102.html">On ZCU102</a></li>
 </ul>
 </li>
 </ul>
@@ -487,15 +486,19 @@ Content on this topic
           <div class="body" role="main">
             
   <section id="vck190-quick-start">
-<span id="ad9081-quickstart-versal"></span><h1>VCK190 Quick start<a class="headerlink" href="#vck190-quick-start" title="Link to this heading"></a></h1>
-<a class="reference internal image-reference" href="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/ad9081_vck190_setup.jpg"><img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/ad9081_vck190_setup.jpg" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/ad9081_vck190_setup.jpg" width="800" />
-</a>
+<span id="ad9081-quickstart-vck190"></span><h1>VCK190 Quick start<a class="headerlink" href="#vck190-quick-start" title="Link to this heading"></a></h1>
 <p>This guide provides some quick instructions on how to setup the
 <a class="icon adi reference external" href="https://www.analog.com/EVAL-AD9081" target="_blank">EVAL-AD9081</a> / <a class="icon adi reference external" href="https://www.analog.com/EVAL-AD9082" target="_blank">EVAL-AD9082</a> on:</p>
 <ul class="simple">
 <li><p><a class="icon link reference external" href="https://www.xilinx.com/VCK190" target="_blank">VCK190</a> FMCP1 (J51) port</p></li>
 </ul>
-<section id="using-linux-as-software">
+<a class="reference internal image-reference" href="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/vck190.jpg"><img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/vck190.jpg" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/vck190.jpg" width="900" />
+</a>
+<div><div class="esd-warning docutils container">
+<div class="icon"></div><p>All the products described on this page include ESD (electrostatic discharge) sensitive devices. Electrostatic charges as high as 4000V readily accumulate on the human body or test equipment and can discharge without detection.
+Although the boards feature ESD protection circuitry, permanent damage may occur on devices subjected to high-energy electrostatic discharges. Therefore, proper ESD precautions are recommended to avoid performance degradation or loss of functionality. This includes removing static charge on external equipment, cables, or antennas before connecting to the device. </p>
+</div>
+</div><section id="using-linux-as-software">
 <h2>Using Linux as software<a class="headerlink" href="#using-linux-as-software" title="Link to this heading"></a></h2>
 <section id="necessary-files">
 <h3>Necessary files<a class="headerlink" href="#necessary-files" title="Link to this heading"></a></h3>
@@ -517,8 +520,8 @@ here:</p>
 <li><p><a class="reference internal" href="../../../../linux/kernel/zynqmp.html#linux-kernel-zynqmp"><span class="std std-ref">Build ZynqMP / MPSoC Linux kernel and devicetree</span></a> (the only difference compared to the ZynqMP is
 that instead of running <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">adi_zynqmp_defconfig</span></code>,
 you must run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">adi_versal_defconfig</span></code>)</p></li>
-<li><p><a class="icon link reference external" href="https://analogdevicesinc.github.io/hdl/projects/ad9081_fmca_ebz/index.html#ad9081-fmca-ebz" target="_blank" title="(in HDL)"><span>AD9081/AD9082/AD9986/AD9988 HDL project</span></a> build documentation. More HDL build details at
-<a class="icon link reference external" href="https://analogdevicesinc.github.io/hdl/user_guide/build_hdl.html#build-hdl" target="_blank" title="(in HDL)"><span>Build an HDL project</span></a>.</p></li>
+<li><p><a class="icon link reference external" href="https://analogdevicesinc.github.io/hdl/projects/ad9081_fmca_ebz/index.html#ad9081-fmca-ebz" target="_blank" title="(in HDL)"><span>AD9081/AD9082/AD9986/AD9988 HDL project</span></a> build documentation. More HDL build
+details at <a class="icon link reference external" href="https://analogdevicesinc.github.io/hdl/user_guide/build_hdl.html#build-hdl" target="_blank" title="(in HDL)"><span>Build an HDL project</span></a>.</p></li>
 </ul>
 </section>
 <section id="required-software">
@@ -546,58 +549,45 @@ you must run <code class="docutils literal notranslate"><span class="pre">make</
 </section>
 <section id="testing">
 <h3>Testing<a class="headerlink" href="#testing" title="Link to this heading"></a></h3>
-<a class="reference internal image-reference" href="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/vck190.jpg"><img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/vck190.jpg" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/vck190.jpg" width="900" />
-</a>
 <section id="creating-the-setup">
 <h4>Creating the setup<a class="headerlink" href="#creating-the-setup" title="Link to this heading"></a></h4>
-<div><div class="esd-warning docutils container">
-<div class="icon"></div><p>All the products described on this page include ESD (electrostatic discharge) sensitive devices. Electrostatic charges as high as 4000V readily accumulate on the human body or test equipment and can discharge without detection.
-Although the boards feature ESD protection circuitry, permanent damage may occur on devices subjected to high-energy electrostatic discharges. Therefore, proper ESD precautions are recommended to avoid performance degradation or loss of functionality. This includes removing static charge on external equipment, cables, or antennas before connecting to the device. </p>
-</div>
-</div><p>Follow the steps in this order, to avoid damaging the components:</p>
-<ul class="simple">
+<a class="reference internal image-reference" href="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/ad9081_vck190_setup.jpg"><img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/ad9081_vck190_setup.jpg" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/ad9081_vck190_setup.jpg" width="800" />
+</a>
+<p>Follow the steps in this order, to avoid damaging the components:</p>
+<ol class="arabic">
 <li><p>Connect the <a class="icon adi reference external" href="https://www.analog.com/EVAL-AD9081" target="_blank">EVAL-AD9081</a> / <a class="icon adi reference external" href="https://www.analog.com/EVAL-AD9082" target="_blank">EVAL-AD9082</a> FMC board to the
-FPGA carrier FMC+ FMCP1 socket</p></li>
+VCK190 FMCP1 socket</p></li>
 <li><p>Connect USB UART J207 (Type-C USB) to your host PC</p></li>
 <li><p>Insert SD card with ADI Kuiper image into socket J302</p></li>
-<li><p>Insert System Controller SD card into socket J206</p></li>
+<li><p>Insert System Controller micro SD card into socket J206</p></li>
 <li><p>Configure ACAP for SD boot (mode SW1[4:1] switch in the position
-<strong>OFF,OFF,OFF,ON</strong> as seen in the below picture)</p></li>
-</ul>
+<strong>OFF,OFF,OFF,ON</strong> as seen in the below picture)</p>
 <a class="reference internal image-reference" href="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/vck190_sw1.jpg"><img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/vck190_sw1.jpg" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/vck190_sw1.jpg" width="200" />
 </a>
-<ul class="simple">
-<li><dl class="simple">
-<dt>Configure System Controller for SD card boot (mode SW11[4:1] switch in the</dt><dd><p>position <strong>OFF,OFF,OFF,ON</strong> as seen in the below picture).</p>
-</dd>
-</dl>
 </li>
-</ul>
+<li><p>Configure System Controller for SD card boot (mode SW11[4:1] switch in the
+position <strong>OFF,OFF,OFF,ON</strong> as seen in the below picture).</p>
 <a class="reference internal image-reference" href="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/vck190_sw11.jpg"><img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/vck190_sw11.jpg" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/vck190_sw11.jpg" width="200" />
 </a>
-<ul class="simple">
+</li>
 <li><p>Connect an Ethernet cable to J307 and also to SYSCTL Ethernet port to access
 Board Evaluation &amp; Management Tool (BEAM);</p></li>
 <li><p>Turn on the power switch on the FPGA board;</p></li>
 <li><p>Observe kernel and serial console messages on your terminal, both the ACAP
 UART interface and the System controller. (use the first ttyUSB or COM port
-registered for the ACAP UART interface, and try  the other 2 to find the one
+registered for the ACAP UART interface, and try the other 2 to find the one
 for System Controller);</p></li>
 <li><p>On the System Controller console, a BEAM Tool Web Address should be assigned.
-Go to this web address to set VADJ_FMC to 1.5V;</p></li>
-<li><p>To change VADJ_FMC On BEAM, click ‘Test The Board’&gt;’Board Settings’&gt;’FMC’.
-Then on ‘Set VADJ_FMC’, select 1.5V and click ‘Set’.</p></li>
-</ul>
+Go to this web address to set VADJ_FMC to 1.5V;</p>
 <a class="reference internal image-reference" href="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/eval-ad9081/quickstart/beam-home.jpg"><img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/eval-ad9081/quickstart/beam-home.jpg" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/eval-ad9081/quickstart/beam-home.jpg" width="1000" />
 </a>
 <a class="reference internal image-reference" href="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/eval-ad9081/quickstart/beam-board-settings.jpg"><img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/eval-ad9081/quickstart/beam-board-settings.jpg" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/eval-ad9081/quickstart/beam-board-settings.jpg" width="1000" />
 </a>
 <a class="reference internal image-reference" href="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/eval-ad9081/quickstart/beam-set-vadj.jpg"><img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/eval-ad9081/quickstart/beam-set-vadj.jpg" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/eval-ad9081/quickstart/beam-set-vadj.jpg" width="1000" />
 </a>
-<ul class="simple">
+</li>
 <li><p>On the ACAP UART interface console, reboot the system. After reboot,
-ad9081 devices should be present.</p></li>
-</ul>
+AD9081 devices should be present.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Versal-based carriers (<a class="icon link reference external" href="https://www.xilinx.com/VCK190" target="_blank">VCK190</a>) might not boot with released image.</p>
@@ -611,10 +601,11 @@ Converter webpage)</p></li>
 <li><p>continue booting</p></li>
 </ul>
 </div>
-</section>
+</li>
+</ol>
 </section>
 <section id="acap-sd-card-boot-files">
-<h3>ACAP SD card boot files<a class="headerlink" href="#acap-sd-card-boot-files" title="Link to this heading"></a></h3>
+<h4>ACAP SD card boot files<a class="headerlink" href="#acap-sd-card-boot-files" title="Link to this heading"></a></h4>
 <p>The files that need to be present on the SD card BOOT partition are:</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">BOOT.BIN</span></code></p></li>
@@ -627,12 +618,12 @@ Converter webpage)</p></li>
 ADI Kuiper image. Then, copy the Image from the <code class="docutils literal notranslate"><span class="pre">versal-common</span></code> folder.</p>
 </section>
 <section id="setting-up-uart">
-<h3>Setting up UART<a class="headerlink" href="#setting-up-uart" title="Link to this heading"></a></h3>
+<h4>Setting up UART<a class="headerlink" href="#setting-up-uart" title="Link to this heading"></a></h4>
 <p>When setting up the UART make sure you connect to the ACAP UART interface and
 not the System controller.</p>
 </section>
 <section id="boot-messages">
-<h3>Boot messages<a class="headerlink" href="#boot-messages" title="Link to this heading"></a></h3>
+<h4>Boot messages<a class="headerlink" href="#boot-messages" title="Link to this heading"></a></h4>
 <p>Login Information required for the System Controller:</p>
 <ul class="simple">
 <li><p>user: analog</p></li>
@@ -1302,7 +1293,8 @@ Password:
 </div>
 </div>
 </div>
-</div><section id="useful-commands-for-the-serial-terminal">
+</div></section>
+<section id="useful-commands-for-the-serial-terminal">
 <h4>Useful commands for the serial terminal<a class="headerlink" href="#useful-commands-for-the-serial-terminal" title="Link to this heading"></a></h4>
 <p>The below commands are to be run in the serial terminal connected to the FPGA.</p>
 <p>To find out the IP of the FPGA board, run:</p>
@@ -1355,7 +1347,8 @@ message to be printed, then power off the FPGA board from the switch as well.</p
 be taken not to corrupt the file system – please shut down things, don’t
 just turn off the power switch. Depending on your monitor, the standard
 power off could be hiding. You can do this from the terminal as well with
-<code class="code docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">shutdown</span> <span class="pre">-h</span> <span class="pre">now</span></code> or the above-mentioned command for powering off.</p>
+<code class="code docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">shutdown</span> <span class="pre">-h</span> <span class="pre">now</span></code> or the above-mentioned command for powering
+off.</p>
 </div>
 </section>
 </section>
@@ -1384,9 +1377,6 @@ be found out with a command from the previous section of this documentation.</p>
 Opening it will automatically connect to the setup and you can use the
 application.</p>
 </section>
-<section id="about-the-iio-devices">
-<h4>About the IIO devices<a class="headerlink" href="#about-the-iio-devices" title="Link to this heading"></a></h4>
-</section>
 </section>
 </section>
 </section>
@@ -1396,7 +1386,7 @@ application.</p>
               <div class="related">
                 &nbsp;
     <a href="a10soc.html" title="Previous document (Alt+Shift+LeftArrow)" class="prev">Arria 10 SoC Quick start</a>
-    <a href="zynqmp.html" title="Next document (Alt+Shift+RightArrow)" class="next">ZCU102 Quick start</a>
+    <a href="zc706.html" title="Next document (Alt+Shift+RightArrow)" class="next">ZC706 Quick start</a>
               </div>
           
         </div>
