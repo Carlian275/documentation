@@ -8,8 +8,8 @@
 
     <title>Build MicroBlaze Linux kernel &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/app.min.css?v=31a9e0ba" />
-    <script async="async" src="../../_static/app.umd.js?v=3a4867e9"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/app.min.css?v=5d595293" />
+    <script async="async" src="../../_static/app.umd.js?v=62fc6850"></script>
     <link rel="icon" href="../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -99,6 +99,7 @@
 <li><a class="reference internal" href="#checkout-the-release-branch">Checkout the Release branch</a></li>
 <li><a class="reference internal" href="#setup-cross-compile-environment-variables">Setup cross compile environment variables</a></li>
 <li><a class="reference internal" href="#compile-the-kernel">Compile the kernel</a></li>
+<li><a class="reference internal" href="#patch-a-dtb-to-a-simpleimage">Patch a DTB to a simpleImage</a></li>
 <li><a class="reference internal" href="#boot-on-fpga-microblaze">Boot on FPGA MicroBlaze</a></li>
 </ul>
 </li>
@@ -265,6 +266,8 @@ Content on this topic
 </ul>
 </li>
 <li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-12-2" id="toctree-collapse-12-2"/><div class="collapse"><a class="reference internal" href="../../solutions/reference-designs/ad-apard32690-sl/index.html">AD-APARD32690-SL</a><label for="toctree-collapse-12-2"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../solutions/reference-designs/ad-apard32690-sl/ad-apardpfwd-sl/index.html">AD-APARDPFWD-SL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../solutions/reference-designs/ad-apard32690-sl/ad-apardspoe-sl/index.html">AD-APARDSPOE-SL</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../solutions/reference-designs/ad-apard32690-sl/ad-t1lusb-ebz/index.html">AD-T1LUSB2.0-EBZ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../solutions/reference-designs/ad-apard32690-sl/nina-w102/index.html">NINA-W102 Networking Support</a></li>
 </ul>
@@ -309,6 +312,7 @@ Content on this topic
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../solutions/reference-designs/ad-ps3803-rd/index.html">AD-PS3803-RD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../solutions/reference-designs/ad-rpi-t1lpse-sl/index.html">AD-RPI-T1LPSE-SL</a></li>
 <li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-12-10" id="toctree-collapse-12-10"/><div class="collapse"><a class="reference internal" href="../../solutions/reference-designs/ad-swiot1l-sl/index.html">AD-SWIOT1L-SL</a><label for="toctree-collapse-12-10"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../solutions/reference-designs/ad-swiot1l-sl/hardware-guide/index.html">Hardware User Guide</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../solutions/reference-designs/ad-swiot1l-sl/software-guide/index.html">Software User Guide</a></li>
@@ -318,6 +322,7 @@ Content on this topic
 <li class="toctree-l3"><a class="reference internal" href="../../solutions/reference-designs/ad4052-ardz/user-guide.html">Evaluating the device</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../solutions/reference-designs/ad4130-pmod/index.html">EVAL-AD4130-8-PMDZ</a></li>
 <li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-12-12" id="toctree-collapse-12-12"/><div class="collapse"><a class="reference internal" href="../../solutions/reference-designs/ad9084_ebz/index.html">AD9084-FMCA-EBZ (Apollo)</a><label for="toctree-collapse-12-12"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../solutions/reference-designs/ad9084_ebz/prerequisites.html">Prerequisites</a></li>
 <li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-12-12-1" id="toctree-collapse-12-12-1"/><div class="collapse"><a class="reference internal" href="../../solutions/reference-designs/ad9084_ebz/quickstart/index.html">Quickstart</a><label for="toctree-collapse-12-12-1"><div class="icon"></div></label></div><ul>
@@ -600,7 +605,12 @@ that the <em>&lt;dts-file&gt;</em> does not include the file extension <em>.dts<
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>simpleImage.&lt;dts-file&gt;
 </pre></div>
 </div>
-<div class="clear-left"></div></div></div><p>To see what device-trees for the different FPGA carrier and FMC module combination exist type:</p>
+<div class="clear-left"></div></div></div><div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can generate a <a class="reference internal" href="#linux-kernel-microblaze-dtb-hack"><span class="std std-ref">generic simpleImage and overwrite the dtb</span></a>
+instead.</p>
+</div>
+<p>To see what device-trees for the different FPGA carrier and FMC module combination exist type:</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~/linux$
 </pre></div>
 </div>
@@ -654,6 +664,89 @@ Kernel: arch/microblaze/boot/simpleImage.vcu118_quad_ad9081_204c_txmode_23_rxmod
 <div class="clear-left"></div></div></div><p>The STRIP image (<em>.strip</em>) found under <em>arch/microblaze/boot</em> is the ELF image
 to load via the debugger.</p>
 </section>
+<section id="patch-a-dtb-to-a-simpleimage">
+<span id="linux-kernel-microblaze-dtb-hack"></span><h3>Patch a DTB to a simpleImage<a class="headerlink" href="#patch-a-dtb-to-a-simpleimage" title="Link to this heading"></a></h3>
+<p>Microblaze embeds the device tree into the simpleImage, but if you need to
+generate a batch of images with the same kernel, you can create an “empty”
+devicetree, build the simpleImage:</p>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;/dts-v1/;\n\n/ { };\n&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>arch/microblaze/boot/dts/generic.dts
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>simpleImage.generic
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div><p>And patch the device tree into the strip simpleImage:</p>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">dtb</span><span class="o">=</span>vcu118_quad_ad9081_204c_txmode_23_rxmode_25_onchip_pll_revc_nz1.dtb
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set dtb address and length</span>
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">dtb_start</span><span class="o">=</span><span class="k">$((</span><span class="m">16#84e5c8</span><span class="k">))</span>
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">dtb_end</span><span class="o">=</span><span class="k">$((</span><span class="m">16#85f000</span><span class="k">))</span>
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">dtb_length</span><span class="o">=</span><span class="k">$((</span><span class="nv">dtb_end</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">dtb_start</span><span class="k">))</span>
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Build</span>
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span><span class="nv">$dtb</span>
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clear any previous devicetree</span>
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>/dev/zero<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="nv">of</span><span class="o">=</span><span class="s2">&quot;arch/microblaze/boot/simpleImage.generic.strip&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="nv">bs</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">seek</span><span class="o">=</span><span class="nv">$dtb_start</span><span class="w"> </span><span class="nv">conv</span><span class="o">=</span>notrunc<span class="w"> </span><span class="nv">count</span><span class="o">=</span><span class="nv">$dtb_length</span>
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span> 68152 bytes (68 kB, 67 KiB) copied, 0.0198292 s, 3.4 MB/s
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write new</span>
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dd<span class="w"> </span><span class="k">if</span><span class="o">=</span><span class="s2">&quot;arch/microblaze/boot/dts/</span><span class="nv">$dtb</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="nv">of</span><span class="o">=</span><span class="s2">&quot;arch/microblaze/boot/simpleImage.generic.strip&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="nv">bs</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">seek</span><span class="o">=</span><span class="nv">$dtb_start</span><span class="w"> </span><span class="nv">conv</span><span class="o">=</span>notrunc
+</pre></div>
+</div>
+<div class="clear-left"></div></div><div><div class="no-select highlight-text notranslate"><div class="highlight"><pre><span></span> 31787 bytes (32 kB, 31 KiB) copied, 0.0111866 s, 2.8 MB/s
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div></section>
 <section id="boot-on-fpga-microblaze">
 <h3>Boot on FPGA MicroBlaze<a class="headerlink" href="#boot-on-fpga-microblaze" title="Link to this heading"></a></h3>
 <p>One method to load the kernel onto the already built and running FPGA which has
