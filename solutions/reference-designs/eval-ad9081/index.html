@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta content="The EVAL-AD9081 is an FMC radio card for the AD9081, mixed signal front end (MxFE®), highly integrated device with four 16-bit, 12 GSPS maximum sample rate, RF DAC cores, and four 12-bit, 4 GSPS rate, RF ADC cores. The AD9081 model is 4D4AC, supporting 4 DACs and 4 ADCs." name="description" />
+<meta content="MxFE™ Quad, 16-Bit, 12GSPS RFDAC and Quad, 12-Bit, 4/6 GSPS RFADC." name="description" />
 
     <title>AD9081 &amp; AD9082 &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8e8a900e" />
@@ -14,7 +14,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="User guide" href="user-guide.html" />
-    <link rel="prev" title="EVAL-AD5592R-PMDZ" href="../eval-ad5592R-pmdz/index.html" />
+    <link rel="prev" title="EVAL-AD7124-8-PMDZ Demo Project" href="../eval-ad7124-8-pmdz/demo/index.html" />
    
   
   
@@ -95,7 +95,6 @@
         <nav>
           <ul>
 <li><a class="reference internal" href="#">AD9081 &amp; AD9082</a><ul>
-<li><a class="reference internal" href="#mxfe-quad-16-bit-12gsps-rfdac-and-quad-12-bit-4-6-gsps-rfadc">MxFE™ Quad, 16-Bit, 12GSPS RFDAC and Quad, 12-Bit, 4/6 GSPS RFADC</a><ul>
 <li><a class="reference internal" href="#overview">Overview</a></li>
 <li><a class="reference internal" href="#recommendations">Recommendations</a></li>
 <li><a class="reference internal" href="#table-of-contents">Table of contents</a></li>
@@ -103,8 +102,6 @@
 <li><a class="reference internal" href="#videos">Videos</a></li>
 <li><a class="reference internal" href="#adi-articles">ADI articles</a></li>
 <li><a class="reference internal" href="#warning">Warning</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -361,10 +358,15 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../adrd8012-01Z/index.html">ADRD8012-01Z</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../adxl355-pmdz/index.html">EVAL-ADXL355-PMDZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../eval-ad5592R-pmdz/index.html">EVAL-AD5592R-PMDZ</a></li>
-<li class="toctree-l2 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-18" id="toctree-collapse-13-18" checked=""/><div class="collapse"><a class="current reference internal" href="#">AD9081 &amp; AD9082</a><label for="toctree-collapse-13-18"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../eval-ad5593r-pmdz/index.html">EVAL-AD5593R-PMDZ</a></li>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-18" id="toctree-collapse-13-18"/><div class="collapse"><a class="reference internal" href="../eval-ad7124-8-pmdz/index.html">EVAL-AD7124-8-PMDZ</a><label for="toctree-collapse-13-18"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../eval-ad7124-8-pmdz/demo/index.html">EVAL-AD7124-8-PMDZ Demo Project</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-19" id="toctree-collapse-13-19" checked=""/><div class="collapse"><a class="current reference internal" href="#">AD9081 &amp; AD9082</a><label for="toctree-collapse-13-19"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="user-guide.html">User guide</a></li>
 <li class="toctree-l3"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
-<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-18-1" id="toctree-collapse-13-18-1"/><div class="collapse"><a class="reference internal" href="quickstart/index.html">Quick start guides</a><label for="toctree-collapse-13-18-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-19-1" id="toctree-collapse-13-19-1"/><div class="collapse"><a class="reference internal" href="quickstart/index.html">Quick start guides</a><label for="toctree-collapse-13-19-1"><div class="icon"></div></label></div><ul>
 <li class="toctree-l4"><a class="reference internal" href="quickstart/a10soc.html">On A10SoC</a></li>
 <li class="toctree-l4"><a class="reference internal" href="quickstart/vck190.html">On VCK190</a></li>
 <li class="toctree-l4"><a class="reference internal" href="quickstart/zc706.html">On ZC706</a></li>
@@ -374,10 +376,10 @@ Content on this topic
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-19" id="toctree-collapse-13-19"/><div class="collapse"><a class="reference internal" href="../eval-ad9084/index.html">AD9084-FMCA-EBZ (Apollo)</a><label for="toctree-collapse-13-19"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-20" id="toctree-collapse-13-20"/><div class="collapse"><a class="reference internal" href="../eval-ad9084/index.html">AD9084-FMCA-EBZ (Apollo)</a><label for="toctree-collapse-13-20"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../eval-ad9084/user-guide.html">User guide</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../eval-ad9084/prerequisites.html">Prerequisites</a></li>
-<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-19-1" id="toctree-collapse-13-19-1"/><div class="collapse"><a class="reference internal" href="../eval-ad9084/quickstart/index.html">Quickstart</a><label for="toctree-collapse-13-19-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-20-1" id="toctree-collapse-13-20-1"/><div class="collapse"><a class="reference internal" href="../eval-ad9084/quickstart/index.html">Quickstart</a><label for="toctree-collapse-13-20-1"><div class="icon"></div></label></div><ul>
 <li class="toctree-l4"><a class="reference internal" href="../eval-ad9084/quickstart/microblaze.html">Virtex UltraScale+ VCU118/VCU128</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../eval-ad9084/quickstart/versal.html">Versal ACAP VCK190/VPK180</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../eval-ad9084/quickstart/agilex.html">Intel Agilex 7 I-Series</a></li>
@@ -386,23 +388,23 @@ Content on this topic
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-20" id="toctree-collapse-13-20"/><div class="collapse"><a class="reference internal" href="../eval-adbms6830bmsw/index.html">EVAL-ADBMS6830BMSW</a><label for="toctree-collapse-13-20"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-21" id="toctree-collapse-13-21"/><div class="collapse"><a class="reference internal" href="../eval-adbms6830bmsw/index.html">EVAL-ADBMS6830BMSW</a><label for="toctree-collapse-13-21"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../eval-adbms6830bmsw/software-guide/index.html">Software User Guide</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-21" id="toctree-collapse-13-21"/><div class="collapse"><a class="reference internal" href="../eval-adrv9009/index.html">ADRV9009 &amp; ADRV9008</a><label for="toctree-collapse-13-21"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-22" id="toctree-collapse-13-22"/><div class="collapse"><a class="reference internal" href="../eval-adrv9009/index.html">ADRV9009 &amp; ADRV9008</a><label for="toctree-collapse-13-22"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../eval-adrv9009/prerequisites.html">Prerequisites</a></li>
-<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-21-1" id="toctree-collapse-13-21-1"/><div class="collapse"><a class="reference internal" href="../eval-adrv9009/quickstart/index.html">Quickstart</a><label for="toctree-collapse-13-21-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-22-1" id="toctree-collapse-13-22-1"/><div class="collapse"><a class="reference internal" href="../eval-adrv9009/quickstart/index.html">Quickstart</a><label for="toctree-collapse-13-22-1"><div class="icon"></div></label></div><ul>
 <li class="toctree-l4"><a class="reference internal" href="../eval-adrv9009/quickstart/zynqmp.html">ZCU102</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../eval-adrv9009/basic-iq-datafiles.html">Basic IQ Datafiles</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-22" id="toctree-collapse-13-22"/><div class="collapse"><a class="reference internal" href="../eval-adrv902x/index.html">EVAL-ADRV902X</a><label for="toctree-collapse-13-22"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-23" id="toctree-collapse-13-23"/><div class="collapse"><a class="reference internal" href="../eval-adrv902x/index.html">EVAL-ADRV902X</a><label for="toctree-collapse-13-23"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../eval-adrv902x/user-guide.html">User guide</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../eval-adrv902x/prerequisites.html">Prerequisites</a></li>
-<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-22-1" id="toctree-collapse-13-22-1"/><div class="collapse"><a class="reference internal" href="../eval-adrv902x/quickstart/index.html">Quick start</a><label for="toctree-collapse-13-22-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-23-1" id="toctree-collapse-13-23-1"/><div class="collapse"><a class="reference internal" href="../eval-adrv902x/quickstart/index.html">Quick start</a><label for="toctree-collapse-13-23-1"><div class="icon"></div></label></div><ul>
 <li class="toctree-l4"><a class="reference internal" href="../eval-adrv902x/quickstart/vck190.html">On VCK190</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../eval-adrv902x/quickstart/zcu102.html">On ZCU102</a></li>
 </ul>
@@ -412,7 +414,7 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../eval-cn0359-ebz/index.html">EVAL-CN0359-EBZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../eval-cn0417-ebz/index.html">EVAL-CN0417-EBZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../eval-cn0419-ebz/index.html">EVAL-CN0419-EBZ</a></li>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-23" id="toctree-collapse-13-23"/><div class="collapse"><a class="reference internal" href="../eval-cn0503-ardz/index.html">EVAL-CN0503-ARDZ</a><label for="toctree-collapse-13-23"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-24" id="toctree-collapse-13-24"/><div class="collapse"><a class="reference internal" href="../eval-cn0503-ardz/index.html">EVAL-CN0503-ARDZ</a><label for="toctree-collapse-13-24"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../eval-cn0503-ardz/cn0503-software/index.html">Software User Guide</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../eval-cn0503-ardz/fluorescence-measurement/index.html">Fluorescence Measurement Demo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../eval-cn0503-ardz/nitrate-measurement/index.html">Nitrate Measurement Demo</a></li>
@@ -423,11 +425,12 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../eval-cn0518-ebz/index.html">EVAL-CN0518-EBZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../eval-cn0521-ebz/index.html">EVAL-CN0521-EBZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../eval-cn0523-ebz/index.html">EVAL-CN0523-EBZ</a></li>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-24" id="toctree-collapse-13-24"/><div class="collapse"><a class="reference internal" href="../eval-cn0540-ardz/index.html">EVAL-CN0540-ARDZ</a><label for="toctree-collapse-13-24"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../eval-cn0534-ebz/index.html">EVAL-CN0534-EBZ</a></li>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-25" id="toctree-collapse-13-25"/><div class="collapse"><a class="reference internal" href="../eval-cn0540-ardz/index.html">EVAL-CN0540-ARDZ</a><label for="toctree-collapse-13-25"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../eval-cn0540-ardz/user-guide.html">User guide</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../eval-cn0540-ardz/prerequisites.html">Prerequisites</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../eval-cn0540-ardz/iio-oscilloscope.html">Using the System with IIO Oscilloscope</a></li>
-<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-24-1" id="toctree-collapse-13-24-1"/><div class="collapse"><a class="reference internal" href="../eval-cn0540-ardz/quickstart/index.html">Quickstart</a><label for="toctree-collapse-13-24-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-25-1" id="toctree-collapse-13-25-1"/><div class="collapse"><a class="reference internal" href="../eval-cn0540-ardz/quickstart/index.html">Quickstart</a><label for="toctree-collapse-13-25-1"><div class="icon"></div></label></div><ul>
 <li class="toctree-l4"><a class="reference internal" href="../eval-cn0540-ardz/quickstart/coraz7s.html">CoraZ7-07s</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../eval-cn0540-ardz/quickstart/de10nano.html">DE10-Nano</a></li>
 </ul>
@@ -445,7 +448,7 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../eval-cn0581-ebz/index.html">EVAL-CN0581-EBZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../eval-cn0582-usbz/index.html">EVAL-CN0582-USBZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../eval-cn0583-som/index.html">EVAL-CN0583-SOM</a></li>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-25" id="toctree-collapse-13-25"/><div class="collapse"><a class="reference internal" href="../eval-cn0584-ebz/index.html">EVAL-CN0584-EBZ</a><label for="toctree-collapse-13-25"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-26" id="toctree-collapse-13-26"/><div class="collapse"><a class="reference internal" href="../eval-cn0584-ebz/index.html">EVAL-CN0584-EBZ</a><label for="toctree-collapse-13-26"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../eval-cn0584-ebz/digital-template/index.html">Digital Template Model</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../eval-cn0584-ebz/matlab-configuration/index.html">MATLAB Configuration</a></li>
 </ul>
@@ -453,12 +456,12 @@ Content on this topic
 <li class="toctree-l2"><a class="reference internal" href="../eval-cn0585-fmcz/index.html">EVAL-CN0585-FMCZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../eval-cn0588-ebz/index.html">EVAL-CN0588-EBZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../eval-ess1-sys/index.html">EVAL-ESS1-SYS</a></li>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-26" id="toctree-collapse-13-26"/><div class="collapse"><a class="reference internal" href="../eval-isomax/index.html">EVAL-ISOMAX</a><label for="toctree-collapse-13-26"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-27" id="toctree-collapse-13-27"/><div class="collapse"><a class="reference internal" href="../eval-isomax/index.html">EVAL-ISOMAX</a><label for="toctree-collapse-13-27"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../eval-isomax/hardware_guide/index.html">Hardware User Guide</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../eval-isomax/software_guide/index.html">Software User Guide</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-27" id="toctree-collapse-13-27"/><div class="collapse"><a class="reference internal" href="../eval-ltpa-kit/index.html">EVAL-LTPA-KIT (LTpowerAnalyzer Kit)</a><label for="toctree-collapse-13-27"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-28" id="toctree-collapse-13-28"/><div class="collapse"><a class="reference internal" href="../eval-ltpa-kit/index.html">EVAL-LTPA-KIT (LTpowerAnalyzer Kit)</a><label for="toctree-collapse-13-28"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../eval-ltpa-kit/hardware_guide/index.html">EVAL-LTPA-KIT Hardware User Guide</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../eval-ltpa-kit/software_guide/index.html">EVAL-LTPA-KIT Software Guide</a></li>
 </ul>
@@ -528,14 +531,13 @@ Content on this topic
             
   <section id="ad9081-ad9082">
 <span id="ad9081"></span><h1>AD9081 &amp; AD9082<a class="headerlink" href="#ad9081-ad9082" title="Link to this heading"></a></h1>
-<section id="mxfe-quad-16-bit-12gsps-rfdac-and-quad-12-bit-4-6-gsps-rfadc">
-<h2>MxFE™ Quad, 16-Bit, 12GSPS RFDAC and Quad, 12-Bit, 4/6 GSPS RFADC<a class="headerlink" href="#mxfe-quad-16-bit-12gsps-rfdac-and-quad-12-bit-4-6-gsps-rfadc" title="Link to this heading"></a></h2>
+<p>MxFE™ Quad, 16-Bit, 12GSPS RFDAC and Quad, 12-Bit, 4/6 GSPS RFADC.</p>
 <a class="reference internal image-reference" href="../../../_images/ad9081.webp"><img alt="../../../_images/ad9081.webp" class="align-left" src="../../../_images/ad9081.webp" width="150" />
 </a>
 <a class="reference internal image-reference" href="../../../_images/ad9082.webp"><img alt="../../../_images/ad9082.webp" class="align-left" src="../../../_images/ad9082.webp" width="120" />
 </a>
 <section id="overview">
-<h3>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h3>
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
 <p>The <a class="icon adi reference external" href="https://www.analog.com/EVAL-AD9081" target="_blank">EVAL-AD9081</a> is an FMC radio card for the <a class="icon adi reference external" href="https://www.analog.com/AD9081" target="_blank">AD9081</a>, mixed signal
 front end (MxFE®), highly integrated device with four 16-bit, 12 GSPS maximum
 sample rate, RF DAC cores, and four 12-bit, 4 GSPS rate, RF ADC cores.
@@ -581,7 +583,7 @@ supporting 2 DACs and 2 ADCs.</p>
 </div>
 </section>
 <section id="recommendations">
-<h3>Recommendations<a class="headerlink" href="#recommendations" title="Link to this heading"></a></h3>
+<h2>Recommendations<a class="headerlink" href="#recommendations" title="Link to this heading"></a></h2>
 <p>People who follow the flow that is outlined, have a much better experience with
 things. However, like many things, documentation is never as complete as it
 should be. If you have any questions, feel free to ask on our
@@ -591,7 +593,7 @@ sure you read our documentation thoroughly.</p>
 the <a class="icon adi reference external" href="https://www.analog.com/EVAL-AD9081" target="_blank">EVAL-AD9081</a> / <a class="icon adi reference external" href="https://www.analog.com/EVAL-AD9082" target="_blank">EVAL-AD9082</a> evaluation board.</p>
 </section>
 <section id="table-of-contents">
-<h3>Table of contents<a class="headerlink" href="#table-of-contents" title="Link to this heading"></a></h3>
+<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Using the evaluation board/full stack reference design that we offer:</p>
 <ol class="arabic simple">
@@ -672,21 +674,21 @@ evaluation board</p></li>
 </ol>
 </section>
 <section id="block-diagram">
-<span id="ad9081-block-diagram"></span><h3>Block diagram<a class="headerlink" href="#block-diagram" title="Link to this heading"></a></h3>
+<span id="ad9081-block-diagram"></span><h2>Block diagram<a class="headerlink" href="#block-diagram" title="Link to this heading"></a></h2>
 <a class="reference internal image-reference" href="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/ad9081_block_diagram.png"><img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/ad9081_block_diagram.png" class="align-center" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/ad9081_block_diagram.png" width="700" />
 </a>
 <a class="reference internal image-reference" href="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/ad9082_block_diagram.png"><img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/ad9082_block_diagram.png" class="align-center" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/images/ad9082_block_diagram.png" width="700" />
 </a>
 </section>
 <section id="videos">
-<h3>Videos<a class="headerlink" href="#videos" title="Link to this heading"></a></h3>
+<h2>Videos<a class="headerlink" href="#videos" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="icon adi reference external" href="https://www.analog.com/resources/media-center/videos/6264484847001.html" target="_blank">Fan assembly for the MxFE evaluation board</a></p></li>
 <li><p><a class="icon adi reference external" href="https://www.analog.com/resources/media-center/videos/6264485594001.html" target="_blank">Unboxing &amp; setting up the MxFE evaluation board</a></p></li>
 </ul>
 </section>
 <section id="adi-articles">
-<h3>ADI articles<a class="headerlink" href="#adi-articles" title="Link to this heading"></a></h3>
+<h2>ADI articles<a class="headerlink" href="#adi-articles" title="Link to this heading"></a></h2>
 <p>About JESD standard:</p>
 <ol class="arabic simple">
 <li><p><a class="icon adi reference external" href="https://www.analog.com/media/en/technical-documentation/technical-articles/JESD204B-Survival-Guide.pdf" target="_blank">JESD204B Survival Guide</a></p></li>
@@ -695,20 +697,19 @@ evaluation board</p></li>
 </ol>
 </section>
 <section id="warning">
-<h3>Warning<a class="headerlink" href="#warning" title="Link to this heading"></a></h3>
+<h2>Warning<a class="headerlink" href="#warning" title="Link to this heading"></a></h2>
 <div><div class="esd-warning docutils container">
 <div class="icon"></div><p>All the products described on this page include ESD (electrostatic discharge) sensitive devices. Electrostatic charges as high as 4000V readily accumulate on the human body or test equipment and can discharge without detection.
 Although the boards feature ESD protection circuitry, permanent damage may occur on devices subjected to high-energy electrostatic discharges. Therefore, proper ESD precautions are recommended to avoid performance degradation or loss of functionality. This includes removing static charge on external equipment, cables, or antennas before connecting to the device. </p>
 </div>
 </div></section>
 </section>
-</section>
 
 
           </div>
               <div class="related">
                 &nbsp;
-    <a href="../eval-ad5592R-pmdz/index.html" title="Previous document (Alt+Shift+LeftArrow)" class="prev">EVAL-AD5592R-PMDZ</a>
+    <a href="../eval-ad7124-8-pmdz/demo/index.html" title="Previous document (Alt+Shift+LeftArrow)" class="prev">EVAL-AD7124-8-PMDZ Demo Project</a>
     <a href="user-guide.html" title="Next document (Alt+Shift+RightArrow)" class="next">User guide</a>
               </div>
           
