@@ -15,7 +15,7 @@ Required Hardware
 - AMD Xilinx :xilinx:`VCK190` or :xilinx:`VPK180` board
 - :adi:`EVAL-AD9084` evaluation board
 - SD Card of at least 16GB imaged with Kuiper Linux (see
-  :external+adi-kuiper-gen:doc:`Configure a SD Card <hardware-configuration>`)
+  :external+kuiper:doc:`Configure a SD Card <hardware-configuration>`)
 - 2x `Vita 57 FMC+ Extender <https://www.samtec.com/kits/optics-fpga/fmcp-extender/>`__ (:xilinx:`VCK190` only)
 - USB Type-C cable
 - Ethernet cables

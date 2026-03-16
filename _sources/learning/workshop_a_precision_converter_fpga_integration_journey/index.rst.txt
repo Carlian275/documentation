@@ -910,7 +910,7 @@ Use **ADI Kuiper Imager** (or a similar tool) to flash the SD card with the late
 
 .. tip::
 
-   Here you can find more information about obtaining the latest :external+adi-kuiper-gen:doc:`index` image.
+   Here you can find more information about obtaining the latest :external+kuiper:doc:`index` image.
 
 **Step 2: Build the HDL Project**
 

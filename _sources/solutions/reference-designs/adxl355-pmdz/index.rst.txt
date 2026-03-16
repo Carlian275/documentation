@@ -381,7 +381,7 @@ The following is a list of items needed in order to replicate this demo.
 
 -  **Software**
 
-   -  32-bit Kuiper Linux Image from :git-adi-kuiper-gen:`GitHub Actions
+   -  32-bit Kuiper Linux Image from :git-kuiper:`GitHub Actions
       <actions/workflows/kuiper2_0-build.yml+>`
 
 Loading Image on SD Card
@@ -396,7 +396,7 @@ Configuring the SD Card
 -----------------------
 
 Follow the configuration procedure for Raspberry Pi at
-:external+adi-kuiper-gen:doc:`hardware-configuration`, substituting the
+:external+kuiper:doc:`hardware-configuration`, substituting the
 following lines in **config.txt**:
 
 ::

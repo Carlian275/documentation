@@ -90,7 +90,7 @@ feel free to ask.
      #. Quick Start Guide (see :ref:`ad-jupiter-ebz quickstart`)
      #. Quick Start Guides
          #. Generate a custom device profile using TES (see :ref:`ad-jupiter-ebz profile-generation`)
-         #. :external+adi-kuiper-gen:ref:`use-kuiper-image`
+         #. :external+kuiper:ref:`use-kuiper-image`
 - Software Solutions
      #. :ref:`iio-oscilloscope`
          #. :dokuwiki:`ADRV9001/2 IIO Scope View <resources/tools-software/linux-software/adrv9002_osc_main>`

@@ -43,7 +43,7 @@ here:
 Required Software
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- SD Card 16GB imaged with :external+adi-kuiper-gen:doc:`Kuiper <index>`
+- SD Card 16GB imaged with :external+kuiper:doc:`Kuiper <index>`
 - **Since the Versal support is not part of the latest release**, you must update
   the BOOT partition of the SD card with the latest built files from main
   branches. They can be downloaded from here:

@@ -257,7 +257,7 @@ What is "ADI Kuiper Linux"? Here's a little glossary:
    -  Desktop environment with VNC server (optional)
 
 In order to obtain an SD card with a Kuiper Linux image you can follow the steps
-in the :external+adi-kuiper-gen:doc:`dedicated Kuiper documentation <index>`.
+in the :external+kuiper:doc:`dedicated Kuiper documentation <index>`.
 Make sure to use or build an image with desktop configured.
 
 At this point, you should be able to:

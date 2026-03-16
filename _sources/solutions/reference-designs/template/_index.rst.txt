@@ -68,7 +68,7 @@ Table of contents
       #. Using the :ref:`ZCU102/Zynq UltraScale MP SoC <template quickstart zynqmp>`
       #. Using the :ref:`VCK190/Versal <template quickstart versal>`
 
-   #. Configure an SD Card with :external+adi-kuiper-gen:doc:`Kuiper <index>`
+   #. Configure an SD Card with :external+kuiper:doc:`Kuiper <index>`
 
    #. Linux Applications
 

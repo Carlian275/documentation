@@ -291,7 +291,7 @@ Preparing the Raspberry Pi 5 SD Card
 2. Unzip the downloaded file to extract the image.
 
 3. Write the image to an SD card by following the
-   :external+adi-kuiper-gen:ref:`Writing the Image to an SD Card
+   :external+kuiper:ref:`Writing the Image to an SD Card
    <use-kuiper-image>` guide.
 
 Preparing the CoraZ7S SD Card
@@ -303,7 +303,7 @@ Preparing the CoraZ7S SD Card
 2. Unzip the downloaded file to extract the image.
 
 3. Write the image to an SD card by following the
-   :external+adi-kuiper-gen:ref:`Writing the Image to an SD Card
+   :external+kuiper:ref:`Writing the Image to an SD Card
    <use-kuiper-image>` guide.
 
 Once both SD cards are prepared, proceed to the hardware setup below.

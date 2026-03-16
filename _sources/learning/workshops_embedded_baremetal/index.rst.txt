@@ -319,7 +319,7 @@ pre-installed. This is the fastest way to get started.
 2. Unzip the downloaded file to extract the image.
 
 3. Write the image to an SD card by following the
-   :external+adi-kuiper-gen:ref:`Writing the Image to an SD Card
+   :external+kuiper:ref:`Writing the Image to an SD Card
    <use-kuiper-image>` guide.
 
 4. Insert the SD card into your Raspberry Pi 5 and power it on.

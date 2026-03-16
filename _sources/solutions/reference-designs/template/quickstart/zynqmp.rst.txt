@@ -43,7 +43,7 @@ here:
 Required software
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- SD Card 16GB imaged with :external+adi-kuiper-gen:doc:`Kuiper <index>`
+- SD Card 16GB imaged with :external+kuiper:doc:`Kuiper <index>`
   (check out that guide on how to do it, then come back to this section)
 - A UART terminal (Putty/Tera Term/Minicom, etc.) with baud rate 115200 (8N1)
 

@@ -48,7 +48,7 @@ here:
 Required software
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- SD Card 16GB imaged with :external+adi-kuiper-gen:doc:`Kuiper <index>`
+- SD Card 16GB imaged with :external+kuiper:doc:`Kuiper <index>`
 - An UART terminal (Putty/Tera Term/Minicom, etc.) with baud rate 115200 (8N1)
 - SD card imaged with the System Controller image:
   :xilinx:`Image <member/forms/download/design-license-xef.html?filename=sc2.2_01.img.zip>`

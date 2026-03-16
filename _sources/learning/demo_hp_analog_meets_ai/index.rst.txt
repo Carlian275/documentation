@@ -159,7 +159,7 @@ SD Card Configuration
 - For the Jupiter SDR platform, the boot files are generated using the Using
   Kuiper Image:
 
-  :external+adi-kuiper-gen:ref:`Writing the Image to an SD Card
+  :external+kuiper:ref:`Writing the Image to an SD Card
   <use-kuiper-image>`
 
 - For the ADRV9009-ZU11EG, begin by checking out the HDL branch, then navigate

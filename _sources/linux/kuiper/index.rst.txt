@@ -8,7 +8,7 @@ Kuiper
    This page provides an overview of Kuiper Linux within the ADI software
    ecosystem. For complete build instructions, configuration options, and
    detailed guides, see the
-   :external+adi-kuiper-gen:doc:`the dedicated Kuiper documentation <index>`
+   :external+kuiper:doc:`the dedicated Kuiper documentation <index>`
 
 Kuiper is a specialized Debian-based Linux distribution designed specifically
 for Analog Devices hardware and evaluation boards. It provides a complete,
@@ -80,11 +80,11 @@ Getting Started
 
 **Quick Start**
    Download pre-built images from
-   :git-adi-kuiper-gen:`GitHub Actions <actions/workflows/kuiper2_0-build.yml+>`
+   :git-kuiper:`GitHub Actions <actions/workflows/kuiper2_0-build.yml+>`
 
 **Custom Builds**
    Build your own configured image using
-   :git-adi-kuiper-gen:`adi-kuiper-gen </>`
+   :git-kuiper:`kuiper </>`
 
 **Prerequisites**
    Ubuntu 22.04 + Docker for building custom images
@@ -100,9 +100,9 @@ Hardware Support
 Resources
 ---------
 
-- **Source Code**: :git-adi-kuiper-gen:`adi-kuiper-gen </>`
-- **Pre-built Images**: :git-adi-kuiper-gen:`GitHub Actions
+- **Source Code**: :git-kuiper:`kuiper </>`
+- **Pre-built Images**: :git-kuiper:`GitHub Actions
   <actions/workflows/kuiper2_0-build.yml+>`
-- **Issues and Bug Reports**: :git-adi-kuiper-gen:`GitHub Issues <issues+>`
+- **Issues and Bug Reports**: :git-kuiper:`GitHub Issues <issues+>`
 - **Community Discussion**: :ez:`Linux Software Drivers Forum
   <linux-software-drivers>`

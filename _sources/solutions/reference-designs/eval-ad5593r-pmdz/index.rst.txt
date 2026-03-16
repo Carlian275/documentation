@@ -258,7 +258,7 @@ The following is a list of items needed in order to replicate this demo.
 
 - **Software**
 
-  - :external+adi-kuiper-gen:doc:`index`
+  - :external+kuiper:doc:`index`
 
 Loading Image on SD Card
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -267,13 +267,13 @@ In order to boot the Raspberry Pi and control the :adi:`EVAL-AD5593R-PMDZ`,
 you will need to install ADI Kuiper Linux on an SD card. Complete
 instructions, including where to download the SD card image, how to
 write it to the SD card, and how to configure the system are provided on
-the :external+adi-kuiper-gen:doc:`index`.
+the :external+kuiper:doc:`index`.
 
 Configuring the SD Card
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Follow the configuration procedure under **Configuring the SD Card for
-Raspberry Pi Projects** on the :external+adi-kuiper-gen:doc:`index`
+Raspberry Pi Projects** on the :external+kuiper:doc:`index`
 page, substituting the following lines in **config.txt**:
 
 .. code-block::
@@ -510,7 +510,7 @@ Additional Information
  - :git-pyadi-iio:`pyADI-IIO </>`
  - :ref:`pyadi-iio`
  - :ref:`iio-oscilloscope`
- - :external+adi-kuiper-gen:doc:`index`
+ - :external+kuiper:doc:`index`
 
 Registration
 ------------

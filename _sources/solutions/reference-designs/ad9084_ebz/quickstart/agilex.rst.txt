@@ -14,7 +14,7 @@ Required Hardware
 - Intel :intel:`HPS IO48 OOBE Daughter Card <content/www/us/en/docs/programmable/721605/current/daughter-cards-17810.html>`.
 - :adi:`EVAL-AD9084` evaluation board.
 - SD Card of at least 16GB imaged with Kuiper Linux (see
-  :external+adi-kuiper-gen:doc:`Configure a SD Card <hardware-configuration>`).
+  :external+kuiper:doc:`Configure a SD Card <hardware-configuration>`).
 - 1x `Vita 57 FMC+ Extender <https://www.samtec.com/kits/optics-fpga/fmcp-extender/>`__.
 - USB-C cable.
 - Ethernet cable.

@@ -103,7 +103,7 @@ Unlocking the Power of Kuiper 2
 
 *Stages Anatomy*
 
-The adi-kuiper-gen repository structure includes:
+The kuiper repository structure includes:
 
 - **ci/** - Support for automatic builds in GitHub Actions
 - **docs/** - Support for GitHub Documentation
@@ -191,19 +191,19 @@ beyond the standard configuration options.
 
 To use extra scripts:
 
-1. **Add the script** - Place your script file inside the adi-kuiper-gen/stages
+1. **Add the script** - Place your script file inside the kuiper/stages
    directory
 2. **Make it executable** - Make sure your script is executable:
    ``chmod +x your-script.sh``
 3. **Add the path** - Set EXTRA_SCRIPT in the config file to your script's
-   path, relative to adi-kuiper-gen directory
+   path, relative to kuiper directory
 
 Hands-on activity
 -----------------
 
 By the end of this workshop, you will learn:
 
-* How to build a custom Kuiper 2 image using adi-kuiper-gen
+* How to build a custom Kuiper 2 image using kuiper
 * How to prepare SD cards for different carrier boards
 * How to explore IIO devices and connect to target boards
 * How to build and load kernel modules
@@ -245,7 +245,7 @@ Preparing the Raspberry Pi 5 SD Card
 2. Unzip the downloaded file to extract the image.
 
 3. Write the image to an SD card by following the
-   :external+adi-kuiper-gen:ref:`Writing the Image to an SD Card
+   :external+kuiper:ref:`Writing the Image to an SD Card
    <use-kuiper-image>` guide.
 
 Preparing the CoraZ7S SD Card
@@ -257,7 +257,7 @@ Preparing the CoraZ7S SD Card
 2. Unzip the downloaded file to extract the image.
 
 3. Write the image to an SD card by following the
-   :external+adi-kuiper-gen:ref:`Writing the Image to an SD Card
+   :external+kuiper:ref:`Writing the Image to an SD Card
    <use-kuiper-image>` guide.
 
 Preparing the Jupiter SD Card
@@ -269,7 +269,7 @@ Preparing the Jupiter SD Card
 2. Unzip the downloaded file to extract the image.
 
 3. Write the image to an SD card by following the
-   :external+adi-kuiper-gen:ref:`Writing the Image to an SD Card
+   :external+kuiper:ref:`Writing the Image to an SD Card
    <use-kuiper-image>` guide.
 
 Preparing the Raspberry Pi 4 SD Card
@@ -281,7 +281,7 @@ Preparing the Raspberry Pi 4 SD Card
 2. Unzip the downloaded file to extract the image.
 
 3. Write the image to an SD card by following the
-   :external+adi-kuiper-gen:ref:`Writing the Image to an SD Card
+   :external+kuiper:ref:`Writing the Image to an SD Card
    <use-kuiper-image>` guide.
 
 ----
@@ -307,13 +307,13 @@ Build a Custom Kuiper 2 Image
 In this exercise you will learn how to build a Kuiper 2 image that runs a
 custom script.
 
-1. Open a terminal, clone the adi-kuiper-gen repository, move inside it and
+1. Open a terminal, clone the kuiper repository, move inside it and
    start Visual Studio Code:
 
    .. code-block:: bash
 
-      git clone https://github.com/analogdevicesinc/adi-kuiper-gen
-      cd adi-kuiper-gen
+      git clone https://github.com/analogdevicesinc/kuiper
+      cd kuiper
       code .
 
 2. Modify the *config* file in the project as follows:
@@ -1066,7 +1066,7 @@ and will boot it on the Raspberry Pi 5 in front of you.
 1. Power-off the carrier board in front of you (CoraZ7s, Raspberry Pi 4 or
    Jupiter SDR), take the SD card from it and connect it to the Raspberry Pi 5.
 
-2. Open a terminal in adi-kuiper-gen/kuiper-volume folder, unarchive and copy
+2. Open a terminal in kuiper/kuiper-volume folder, unarchive and copy
    the Kuiper image on the SD card. Use lsblk command to check the partition.
    As you saw earlier, the SD card from the adapter is mounted at SDA.
 
@@ -1121,9 +1121,9 @@ Resources
 
 **Kuiper**
 
-:external+adi-kuiper-gen:doc:`index`
+:external+kuiper:doc:`index`
 
-:git-adi-kuiper-gen:`adi-kuiper-gen Repository </>`
+:git-kuiper:`kuiper Repository </>`
 
 **Hardware**
 

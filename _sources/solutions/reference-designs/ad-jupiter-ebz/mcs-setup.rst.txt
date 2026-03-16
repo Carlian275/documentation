@@ -73,7 +73,7 @@ Setup
 -----
 
 #.  Write the latest Kuiper image on the SD cards
-    :external+adi-kuiper-gen:doc:`Kuiper images <index>`
+    :external+kuiper:doc:`Kuiper images <index>`
 
 #.  Copy on the boot partition of the SD cards, the provided 
     boot files from the archive above, for MCS sync (Image, 

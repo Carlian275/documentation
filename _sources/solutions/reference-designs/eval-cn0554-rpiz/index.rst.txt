@@ -38,7 +38,7 @@ Equipment Required
 
 - **Software**
 
-- :external+adi-kuiper-gen:doc:`index`
+- :external+kuiper:doc:`index`
 
 Connectors and Jumper Configurations
 ------------------------------------
@@ -115,7 +115,7 @@ Equipment Required
 
 **Software**
 
-- :external+adi-kuiper-gen:doc:`index`
+- :external+kuiper:doc:`index`
 
 **Documentation**
 
@@ -226,7 +226,7 @@ In order to control the :adi:`EVAL-CN0554-RPIZ` from the Raspberry Pi, you will
 need to install ADI Kuiper Linux on an SD card. Complete instructions,
 including where to download the SD card image, how to write it to the SD card,
 and how to configure the system are provided at
-:external+adi-kuiper-gen:doc:`index`. Write the image and follow the system
+:external+kuiper:doc:`index`. Write the image and follow the system
 configuration procedure.
 
 .. figure:: command_prompt.png
@@ -242,7 +242,7 @@ EVAL-CN0554-RPIZ for this case. The overlay file is already included in
 the SD card and just needs to be matched to the EVAL-CN0554-RPIZ.
 
 Follow the Hardware Configuration procedure under **Preparing the Image:
-Raspberry Pi** in the :external+adi-kuiper-gen:doc:`index` page, substituting
+Raspberry Pi** in the :external+kuiper:doc:`index` page, substituting
 the following lines in **config.txt**:
 
 This brings up the file in the terminal. Scroll down until the line that
@@ -349,7 +349,7 @@ Reference Demos & Software
 
 - :ref:`pyadi-iio`
 - :ref:`iio-oscilloscope`
-- :external+adi-kuiper-gen:doc:`index`
+- :external+kuiper:doc:`index`
 
 Hardware Registration
 ---------------------

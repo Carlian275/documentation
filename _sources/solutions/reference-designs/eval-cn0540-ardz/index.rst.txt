@@ -95,8 +95,8 @@ Table of Contents
 
 #. Use the board to better understand the :adi:`EVAL-CN0540-ARDZ`
 
-      #. :external+adi-kuiper-gen:doc:`Configure a SD Card <hardware-configuration>`
-      #. :external+adi-kuiper-gen:doc:`Update the SD Card <repositories>`
+      #. :external+kuiper:doc:`Configure a SD Card <hardware-configuration>`
+      #. :external+kuiper:doc:`Update the SD Card <repositories>`
 
    #. Linux Applications
 

@@ -596,7 +596,7 @@ Additional Information
 - :ref:`pyadi-iio`
 - :ref:`libiio cli`
 - :ref:`iio-oscilloscope`
-- :external+adi-kuiper-gen:doc:`index`
+- :external+kuiper:doc:`index`
 
 Registration
 ------------

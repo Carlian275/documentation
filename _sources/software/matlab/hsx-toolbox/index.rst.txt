@@ -54,7 +54,7 @@ Libiio Installer
 
    Skip the Zynq SDR or ADALM-PLUTO post-installation steps. They
    are not used.
-   See :external+adi-kuiper-gen:doc:`Kuiper documentation <index>` for the FPGA
+   See :external+kuiper:doc:`Kuiper documentation <index>` for the FPGA
    carrier board SD card images.
 
 is required to use the streaming system objects or blocks. These support

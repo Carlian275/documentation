@@ -102,7 +102,7 @@ Table of contents
       #. Using the :ref:`ZCU102/Zynq UltraScale+ MP SoC <ad9081 quickstart zcu102>`
 
 
-   #. Configure an SD Card with :external+adi-kuiper-gen:doc:`Kuiper <index>`
+   #. Configure an SD Card with :external+kuiper:doc:`Kuiper <index>`
 
    #. Linux Applications
 

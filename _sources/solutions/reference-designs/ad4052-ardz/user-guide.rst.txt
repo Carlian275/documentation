@@ -104,10 +104,10 @@ Linux
 These steps are done before the hardware setup, with the board powered off.
 
 For both CoraZ7S and DE10-Nano, prepare an SD Card with
-:external+adi-kuiper-gen:doc:`Kuiper <index>`.
+:external+kuiper:doc:`Kuiper <index>`.
 
 Then, patch the SD Card with the downloaded files, see
-:external+adi-kuiper-gen:doc:`hardware-configuration` for more information.
+:external+kuiper:doc:`hardware-configuration` for more information.
 
 Insert the flashed SD Card on the carrier powered off and follow the hardware
 setup steps.

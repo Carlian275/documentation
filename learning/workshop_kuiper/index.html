@@ -179,8 +179,10 @@ Content on this topic
 
 <ul>
 <li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-1" id="toctree-collapse-1"/><div class="collapse"><a class="reference internal" href="../../products/adsp/index.html">Digital Signal Processors (ADSP)</a><label for="toctree-collapse-1"><div class="icon"></div></label></div><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../products/adsp/sc598-clock-tree.html">SC598 Clock Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../products/adsp/linux-support.html">Linux support</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../products/adsp/setup.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../products/adsp/sc598-clock-tree.html">SC598 Clock Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../products/adsp/use-cases.html">Use cases</a></li>
 </ul>
 </li>
 </ul>
@@ -733,7 +735,7 @@ settings that are not standard in the config file</p></li>
 Kuiper 2 image at build time</p></li>
 </ul>
 <p><em>Stages Anatomy</em></p>
-<p>The adi-kuiper-gen repository structure includes:</p>
+<p>The kuiper repository structure includes:</p>
 <ul class="simple">
 <li><p><strong>ci/</strong> - Support for automatic builds in GitHub Actions</p></li>
 <li><p><strong>docs/</strong> - Support for GitHub Documentation</p></li>
@@ -831,12 +833,12 @@ customize the resulting image. This feature enables advanced customization
 beyond the standard configuration options.</p>
 <p>To use extra scripts:</p>
 <ol class="arabic simple">
-<li><p><strong>Add the script</strong> - Place your script file inside the adi-kuiper-gen/stages
+<li><p><strong>Add the script</strong> - Place your script file inside the kuiper/stages
 directory</p></li>
 <li><p><strong>Make it executable</strong> - Make sure your script is executable:
 <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">your-script.sh</span></code></p></li>
 <li><p><strong>Add the path</strong> - Set EXTRA_SCRIPT in the config file to your script’s
-path, relative to adi-kuiper-gen directory</p></li>
+path, relative to kuiper directory</p></li>
 </ol>
 </section>
 </section>
@@ -844,7 +846,7 @@ path, relative to adi-kuiper-gen directory</p></li>
 <h2>Hands-on activity<a class="headerlink" href="#hands-on-activity" title="Link to this heading"></a></h2>
 <p>By the end of this workshop, you will learn:</p>
 <ul class="simple">
-<li><p>How to build a custom Kuiper 2 image using adi-kuiper-gen</p></li>
+<li><p>How to build a custom Kuiper 2 image using kuiper</p></li>
 <li><p>How to prepare SD cards for different carrier boards</p></li>
 <li><p>How to explore IIO devices and connect to target boards</p></li>
 <li><p>How to build and load kernel modules</p></li>
@@ -882,7 +884,7 @@ without moving it</p></li>
 <li><p>Download the <a class="icon link reference external" href="https://swdownloads.analog.com/cse/kuiper/kuiperv2.0.0/FTC25/ftc25_pi5_image.zip" target="_blank">Raspberry Pi 5 Kuiper image</a>.</p></li>
 <li><p>Unzip the downloaded file to extract the image.</p></li>
 <li><p>Write the image to an SD card by following the
-<a class="icon link reference external" href="https://analogdevicesinc.github.io/adi-kuiper-gen/use-kuiper-image.html#use-kuiper-image" target="_blank" title="(in Kuiper latest)"><span class="xref std std-ref">Writing the Image to an SD Card</span></a> guide.</p></li>
+<a class="icon link reference external" href="https://analogdevicesinc.github.io/kuiper/use-kuiper-image.html#use-kuiper-image" target="_blank" title="(in Kuiper latest)"><span class="xref std std-ref">Writing the Image to an SD Card</span></a> guide.</p></li>
 </ol>
 </section>
 <section id="preparing-the-coraz7s-sd-card">
@@ -891,7 +893,7 @@ without moving it</p></li>
 <li><p>Download the <a class="icon link reference external" href="https://swdownloads.analog.com/cse/kuiper/kuiperv2.0.0/FTC25/ftc25_cora_image.zip" target="_blank">CoraZ7S Kuiper image</a>.</p></li>
 <li><p>Unzip the downloaded file to extract the image.</p></li>
 <li><p>Write the image to an SD card by following the
-<a class="icon link reference external" href="https://analogdevicesinc.github.io/adi-kuiper-gen/use-kuiper-image.html#use-kuiper-image" target="_blank" title="(in Kuiper latest)"><span class="xref std std-ref">Writing the Image to an SD Card</span></a> guide.</p></li>
+<a class="icon link reference external" href="https://analogdevicesinc.github.io/kuiper/use-kuiper-image.html#use-kuiper-image" target="_blank" title="(in Kuiper latest)"><span class="xref std std-ref">Writing the Image to an SD Card</span></a> guide.</p></li>
 </ol>
 </section>
 <section id="preparing-the-jupiter-sd-card">
@@ -900,7 +902,7 @@ without moving it</p></li>
 <li><p>Download the <a class="icon link reference external" href="https://swdownloads.analog.com/cse/kuiper/kuiperv2.0.0/FTC25/ftc25_jupiter_image.zip" target="_blank">Jupiter Kuiper image</a>.</p></li>
 <li><p>Unzip the downloaded file to extract the image.</p></li>
 <li><p>Write the image to an SD card by following the
-<a class="icon link reference external" href="https://analogdevicesinc.github.io/adi-kuiper-gen/use-kuiper-image.html#use-kuiper-image" target="_blank" title="(in Kuiper latest)"><span class="xref std std-ref">Writing the Image to an SD Card</span></a> guide.</p></li>
+<a class="icon link reference external" href="https://analogdevicesinc.github.io/kuiper/use-kuiper-image.html#use-kuiper-image" target="_blank" title="(in Kuiper latest)"><span class="xref std std-ref">Writing the Image to an SD Card</span></a> guide.</p></li>
 </ol>
 </section>
 <section id="preparing-the-raspberry-pi-4-sd-card">
@@ -909,7 +911,7 @@ without moving it</p></li>
 <li><p>Download the <a class="icon link reference external" href="https://swdownloads.analog.com/cse/kuiper/kuiperv2.0.0/FTC25/ftc25_pi4_image.zip" target="_blank">Raspberry Pi 4 Kuiper image</a>.</p></li>
 <li><p>Unzip the downloaded file to extract the image.</p></li>
 <li><p>Write the image to an SD card by following the
-<a class="icon link reference external" href="https://analogdevicesinc.github.io/adi-kuiper-gen/use-kuiper-image.html#use-kuiper-image" target="_blank" title="(in Kuiper latest)"><span class="xref std std-ref">Writing the Image to an SD Card</span></a> guide.</p></li>
+<a class="icon link reference external" href="https://analogdevicesinc.github.io/kuiper/use-kuiper-image.html#use-kuiper-image" target="_blank" title="(in Kuiper latest)"><span class="xref std std-ref">Writing the Image to an SD Card</span></a> guide.</p></li>
 </ol>
 <hr class="docutils" />
 <p>Make sure the Raspberry Pi 5 in front of you is booted and is connected to the
@@ -931,10 +933,10 @@ in the terminal connected to that image:</p>
 <p>In this exercise you will learn how to build a Kuiper 2 image that runs a
 custom script.</p>
 <ol class="arabic">
-<li><p>Open a terminal, clone the adi-kuiper-gen repository, move inside it and
+<li><p>Open a terminal, clone the kuiper repository, move inside it and
 start Visual Studio Code:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/analogdevicesinc/adi-kuiper-gen
-<span class="nb">cd</span><span class="w"> </span>adi-kuiper-gen
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/analogdevicesinc/kuiper
+<span class="nb">cd</span><span class="w"> </span>kuiper
 code<span class="w"> </span>.
 </pre></div>
 </div>
@@ -1616,7 +1618,7 @@ and will boot it on the Raspberry Pi 5 in front of you.</p>
 <ol class="arabic">
 <li><p>Power-off the carrier board in front of you (CoraZ7s, Raspberry Pi 4 or
 Jupiter SDR), take the SD card from it and connect it to the Raspberry Pi 5.</p></li>
-<li><p>Open a terminal in adi-kuiper-gen/kuiper-volume folder, unarchive and copy
+<li><p>Open a terminal in kuiper/kuiper-volume folder, unarchive and copy
 the Kuiper image on the SD card. Use lsblk command to check the partition.
 As you saw earlier, the SD card from the adapter is mounted at SDA.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>lsblk
@@ -1662,8 +1664,8 @@ code can be freely used, modified, and integrated into projects.</p></li>
 <section id="resources">
 <h2>Resources<a class="headerlink" href="#resources" title="Link to this heading"></a></h2>
 <p><strong>Kuiper</strong></p>
-<p><a class="icon link reference external" href="https://analogdevicesinc.github.io/adi-kuiper-gen/index.html" target="_blank" title="(in Kuiper latest)"><span>ADI Kuiper Linux</span></a></p>
-<p><a class="icon git reference external" href="https://github.com/analogdevicesinc/adi-kuiper-gen/tree/main/" target="_blank">adi-kuiper-gen Repository</a></p>
+<p><a class="icon link reference external" href="https://analogdevicesinc.github.io/kuiper/index.html" target="_blank" title="(in Kuiper latest)"><span>ADI Kuiper Linux</span></a></p>
+<p><a class="icon git reference external" href="https://github.com/analogdevicesinc/kuiper/tree/main/" target="_blank">kuiper Repository</a></p>
 <p><strong>Hardware</strong></p>
 <p><a class="icon link reference external" href="https://digilent.com/reference/programmable-logic/cora-z7/reference-manual" target="_blank">Digilent Cora Z7 Reference Manual</a></p>
 <p><a class="icon adi reference external" href="https://www.analog.com/AD-JUPITER-EBZ" target="_blank">Jupiter SDR Product Page</a></p>

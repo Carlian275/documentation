@@ -253,7 +253,7 @@ Debian, designed specifically for Analog Devices hardware and evaluation boards.
 
 **Build steps:**
 
-#. :external+adi-kuiper-gen:doc:`Check prerequisites<index>` (Ubuntu 22.04 + Docker for building)
+#. :external+kuiper:doc:`Check prerequisites<index>` (Ubuntu 22.04 + Docker for building)
 #. Build your :ref:`kuiper` image:
 
    .. shell::
@@ -261,13 +261,13 @@ Debian, designed specifically for Analog Devices hardware and evaluation boards.
       :group: analog
       :show-user:
 
-      $git clone --depth 1 --branch kuiper-AD-RPI-T1LPSE-SL https://github.com/analogdevicesinc/adi-kuiper-gen
-      $cd adi-kuiper-gen
+      $git clone --depth 1 --branch kuiper-AD-RPI-T1LPSE-SL https://github.com/analogdevicesinc/kuiper
+      $cd kuiper
       $sudo ./build-docker.sh
 
-   For more details on building the image, please refer to the :external+adi-kuiper-gen:doc:`Quick Start<quick-start>`.
+   For more details on building the image, please refer to the :external+kuiper:doc:`Quick Start<quick-start>`.
 
-#. :external+adi-kuiper-gen:doc:`Write the built image to the micro-SD card and boot the Raspberry Pi<use-kuiper-image>`.
+#. :external+kuiper:doc:`Write the built image to the micro-SD card and boot the Raspberry Pi<use-kuiper-image>`.
 
 Configuring the Micro-SD Card
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

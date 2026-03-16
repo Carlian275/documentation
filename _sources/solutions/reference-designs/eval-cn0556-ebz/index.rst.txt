@@ -108,7 +108,7 @@ update the device tree overlay. A Device Tree Overlay contains information about
 additional connected hardware, the EVAL-CN0556-EBZ for this case. The overlay file 
 is already included in the SD card and just needs to be matched to the EVAL-CN0556-EBZ.
 
-Follow :external+adi-kuiper-gen:ref:`hardware-configuration-raspberry-pi`,
+Follow :external+kuiper:ref:`hardware-configuration-raspberry-pi`,
 substituting the following lines in **config.txt**.
 
 This brings up the file in the terminal. Scroll down until the line that

@@ -177,10 +177,10 @@ In order to control the :adi:`EVAL-CN0577-FMCZ <CN0577>`, you will
 need to install ADI Kuiper Linux on an SD card. Complete instructions, including
 where to download the SD card image, how to write it to the SD card, and how to
 configure the system are provided in the
-:external+adi-kuiper-gen:doc:`Kuiper documentation <index>`.
+:external+kuiper:doc:`Kuiper documentation <index>`.
 
 When
-:external+adi-kuiper-gen:doc:`configuring the SD Card <hardware-configuration>`
+:external+kuiper:doc:`configuring the SD Card <hardware-configuration>`
 follow instructions for Xilinx projects.
 
    * Directory on SD image: cn0577_zed

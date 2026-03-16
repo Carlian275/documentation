@@ -40,7 +40,7 @@ If you have any questions, feel free to :ref:`ask <help-and-support>`.
    #. :ref:`Quick Start Guides <adrv9009 quickstart>`
 
       #. :ref:`Linux on ZCU102 <adrv9009 quickstart zynqmp>`
-      #. Configure an SD Card with :external+adi-kuiper-gen:doc:`Kuiper <index>`
+      #. Configure an SD Card with :external+kuiper:doc:`Kuiper <index>`
 
    #. Linux Applications
 
