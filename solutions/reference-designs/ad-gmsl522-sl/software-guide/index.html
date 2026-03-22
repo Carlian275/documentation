@@ -8,8 +8,8 @@
 
     <title>Software Guide &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/app.min.css?v=a525f648" />
-    <script async="async" src="../../../../_static/app.umd.js?v=fcf3088a"></script>
+    <link rel="stylesheet" type="text/css" href="../../../../_static/app.min.css?v=5c8d5ce8" />
+    <script async="async" src="../../../../_static/app.umd.js?v=f78f54ff"></script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <link rel="icon" href="../../../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
@@ -69,7 +69,7 @@
         <a id="logo-org" href="https://analog.com" aria-label="Analog Devices Inc. landing page"></a>
         <div class="vertical-divider"></div>
         
-        <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs" tabindex="0">Docs</label>
+        <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs">Docs</label>
         
         <a id="logo" href="../../../../index.html">
           <div>System Level</div>
@@ -129,14 +129,14 @@
 <li><a class="reference internal" href="#other-helpful-software-and-improvements">Other Helpful Software and Improvements</a><ul>
 <li><a class="reference internal" href="#viewing-ad-gmsl522-sl-remotely-using-nomachine">Viewing AD-GMSL522-SL Remotely Using NoMachine</a></li>
 <li><a class="reference internal" href="#booting-from-nvme">Booting from NVMe</a></li>
-<li><a class="reference internal" href="#booting-from-sd-card">Booting From SD Card</a></li>
+<li><a class="reference internal" href="#booting-from-sd-card">Booting from SD Card</a></li>
 <li><a class="reference internal" href="#restarting-the-fan-service">Restarting the Fan Service</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#ad-gmsl522-sl-hardware-specifics">AD-GMSL522-SL Hardware Specifics</a><ul>
 <li><a class="reference internal" href="#block-diagram">Block Diagram</a></li>
 <li><a class="reference internal" href="#i2c">I2C</a></li>
-<li><a class="reference internal" href="#mipi-qth-samtec-connector">MIPI / QTH SAMTEC CONNECTOR</a></li>
+<li><a class="reference internal" href="#mipi-qth-samtec-connector">MIPI / QTH Samtec Connector</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#appendix-proper-script-for-pattern-generator-viewing-exercise">Appendix (proper script for pattern generator viewing exercise)</a></li>
@@ -218,6 +218,7 @@ Content on this topic
 
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../software/ad9084-profile-generator/index.html">AD9084 (Apollo) Profile Generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../software/analog-attach/index.html">Analog Attach</a></li>
 <li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-4" id="toctree-collapse-4"/><div class="collapse"><a class="reference internal" href="../../../../software/iio-oscilloscope/index.html">IIO Oscilloscope</a><label for="toctree-collapse-4"><div class="icon"></div></label></div><ul>
 <li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-4-1" id="toctree-collapse-4-1"/><div class="collapse"><a class="reference internal" href="../../../../software/iio-oscilloscope/adrv9009/index.html">ADRV9009</a><label for="toctree-collapse-4-1"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../software/iio-oscilloscope/adrv9009/plugin.html">Standard Plugin</a></li>
@@ -461,6 +462,7 @@ Content on this topic
 <li class="toctree-l3"><a class="reference internal" href="../../eval-adbms6830bmsw/software-guide/index.html">Software User Guide</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../eval-admx2501ebz/index.html">EVAL-AD-IMP2501-SL</a></li>
 <li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-24" id="toctree-collapse-13-24"/><div class="collapse"><a class="reference internal" href="../../eval-adrv9009/index.html">ADRV9009 &amp; ADRV9008</a><label for="toctree-collapse-13-24"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../eval-adrv9009/prerequisites.html">Prerequisites</a></li>
 <li class="toctree-l3"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-24-1" id="toctree-collapse-13-24-1"/><div class="collapse"><a class="reference internal" href="../../eval-adrv9009/quickstart/index.html">Quickstart</a><label for="toctree-collapse-13-24-1"><div class="icon"></div></label></div><ul>
@@ -540,15 +542,18 @@ Content on this topic
 <li class="toctree-l3"><a class="reference internal" href="../../eval-cn0584-ebz/matlab-configuration/index.html">MATLAB Configuration</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../eval-cn0585-fmcz/index.html">EVAL-CN0585-FMCZ</a></li>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-31" id="toctree-collapse-13-31"/><div class="collapse"><a class="reference internal" href="../../eval-cn0585-fmcz/index.html">EVAL-CN0585-FMCZ</a><label for="toctree-collapse-13-31"><div class="icon"></div></label></div><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../eval-cn0585-fmcz/power_tree.html">Power Tree</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../eval-cn0588-ebz/index.html">EVAL-CN0588-EBZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../eval-ess1-sys/index.html">EVAL-ESS1-SYS</a></li>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-31" id="toctree-collapse-13-31"/><div class="collapse"><a class="reference internal" href="../../eval-isomax/index.html">EVAL-ISOMAX</a><label for="toctree-collapse-13-31"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-32" id="toctree-collapse-13-32"/><div class="collapse"><a class="reference internal" href="../../eval-isomax/index.html">EVAL-ISOMAX</a><label for="toctree-collapse-13-32"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../eval-isomax/hardware_guide/index.html">Hardware User Guide</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../eval-isomax/software_guide/index.html">Software User Guide</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-32" id="toctree-collapse-13-32"/><div class="collapse"><a class="reference internal" href="../../eval-ltpa-kit/index.html">EVAL-LTPA-KIT (LTpowerAnalyzer Kit)</a><label for="toctree-collapse-13-32"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-13-33" id="toctree-collapse-13-33"/><div class="collapse"><a class="reference internal" href="../../eval-ltpa-kit/index.html">EVAL-LTPA-KIT (LTpowerAnalyzer Kit)</a><label for="toctree-collapse-13-33"><div class="icon"></div></label></div><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../eval-ltpa-kit/hardware_guide/index.html">EVAL-LTPA-KIT Hardware User Guide</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../eval-ltpa-kit/software_guide/index.html">EVAL-LTPA-KIT Software Guide</a></li>
 </ul>
@@ -642,8 +647,8 @@ Content on this topic
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The AD-GMSL522-SL Development Board or simply “GMSL Dev Board” is just
-another name for the AD-GMSL522-SL board. Note that these three names are used
-interchangeably throughout this Getting Started Guide.</p>
+another name for the AD-GMSL522-SL Board. These three names are used
+interchangeably throughout this Software Guide.</p>
 </div>
 <p>This page will go over high-level features and functions of the AD-GMSL522-SL
 Board. The following, specifically, will be covered:</p>
@@ -660,14 +665,14 @@ Board. The following, specifically, will be covered:</p>
 <p>No prior training is required to go through the
 content of this document. A basic understanding of the GMSL technology,
 however, is recommended. The following sub-sections detail the required and
-recommended hardware/software to get the AD-GMSL522-SL board up and running
+recommended hardware/software to get the AD-GMSL522-SL Board up and running
 properly.</p>
 </section>
 <section id="required-hardware">
 <h3>Required Hardware<a class="headerlink" href="#required-hardware" title="Link to this heading"></a></h3>
 <p>The following hardware is required to enable
-critical features of the AD-GMSL522-SL Board. The AD-GMSL522-SL board and
-vetted hardware is shown below. The customer will need to procure their own
+critical features of the AD-GMSL522-SL Board. The AD-GMSL522-SL Board and
+vetted hardware are shown below. The customer will need to procure their own
 Jetson Module and corresponding heatsink.</p>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
@@ -693,46 +698,53 @@ Jetson Module and corresponding heatsink.</p>
 <ul class="simple">
 <li><p>Ethernet Cable or USB &lt;-&gt; Wi-Fi Adapter</p></li>
 <li><p>MicroUSB Cable</p></li>
-<li><p>USB Mouse and eyboard</p></li>
+<li><p>USB Mouse and Keyboard</p></li>
 <li><p><a class="icon link reference external" href="https://www.amazon.com/dp/B09QVP977F?ref_=cm_sw_r_cso_em_apin_dp_G1BNY16H5HNVZBR4SAHA" target="_blank">NVMe Module</a></p></li>
 <li><p><a class="icon link reference external" href="https://www.amazon.com/dp/B09X7CRKRZ?psc=1" target="_blank">SD Card</a></p></li>
 </ul>
 </section>
 <section id="required-software-and-downloads">
 <h3>Required Software and Downloads<a class="headerlink" href="#required-software-and-downloads" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p><a class="icon link reference external" href="https://swdownloads.analog.com/cse/aditof/Viper/gmsl522_1.tar.gz" target="_blank">AD-GMSL522-SL image for flashing</a></p></li>
+<ul>
+<li><p><a class="icon link reference external" href="https://swdownloads.analog.com/cse/aditof/Viper/gmsl522_2.tar.gz" target="_blank">AD-GMSL522-SL image for flashing</a></p></li>
 <li><p>Programming potentiometers for configuration pins: WIP</p></li>
-<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/gmsl/tree/tools/AD-GMSL522-SL" target="_blank">GMSL GUI Server</a></p></li>
+<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/gmsl/tree/tools/AD-GMSL522-SL/gmsl-uart-server-app" target="_blank">GMSL GUI Server</a></p>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="icon git reference external" href="https://github.com/analogdevicesinc/gmsl/tree/tools/AD-GMSL522-SL/gmsl-uart-server-app" target="_blank">GMSL GUI Server</a> must be downloaded on the board.</p>
+</div>
+</div></blockquote>
+</li>
 </ul>
 </section>
 <section id="recommended-tools-and-software">
 <h3>Recommended Tools and Software<a class="headerlink" href="#recommended-tools-and-software" title="Link to this heading"></a></h3>
-<p>The following software are tools that
+<p>The following are software tools that
 are commonly referenced and used during different examples, demos and
-tutorials for AD-GMSL522-SL. To be able to easily follow along with these
+tutorials for the AD-GMSL522-SL Board. To be able to easily follow along with these
 lessons, it is recommended to download and install these tools.</p>
 <ul class="simple">
-<li><p>NoMachine (there is a following section below for more information)</p></li>
+<li><p>NoMachine (there is a section below for more information)</p></li>
 </ul>
 </section>
 </section>
 <section id="ad-gmsl522-sl-hardware-overview">
 <h2>AD-GMSL522-SL Hardware Overview<a class="headerlink" href="#ad-gmsl522-sl-hardware-overview" title="Link to this heading"></a></h2>
 <p>In this section, the inputs, outputs, and other general hardware features of the
-AD-GMSL522-SL board will be discussed.</p>
+AD-GMSL522-SL Board will be discussed.</p>
 <section id="gmsl-camera-inputs">
 <h3>GMSL Camera Inputs<a class="headerlink" href="#gmsl-camera-inputs" title="Link to this heading"></a></h3>
 <p>One way to send video data to the AD-GMSL522-SL
-board is through GMSL-2 compatible camera modules. They can be connected to
+Board is through GMSL-2 compatible camera modules. They can be connected to
 the onboard FAKRA connectors, INA+, INB+, INC+, and IND+. These FAKRA
 connectors are connected directly to the onboard MAX96724. In addition to
-being connected to the deserializer these connectors are also shorted to +12V.
-This means that the camera modules can be powered from the AD-GMSL522-SL board
+being connected to the deserializer, these connectors are also shorted to +12V.
+This means that the camera modules can be powered from the AD-GMSL522-SL Board
 and do not need to be powered internally. This is important to note because it
 means that another voltage source should not be connected to these FAKRA
 connectors, otherwise damage could be caused to either the AD-GMSL522-SL
-board, or the user’s module.</p>
+Board, or the user’s module.</p>
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/samtec_connector_image.png"><img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/samtec_connector_image.png" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/samtec_connector_image.png" style="width: 600px;" />
 </a>
@@ -743,7 +755,7 @@ board, or the user’s module.</p>
 <p>The MAX96724 has its Port B CSI-2 DPHY bus connected to the input of the Jetson
 SoM. The second way that a user can send video to the Jetson SoM is through the
 SAMTEC connector on the bottom of the board. Any GMSL2 CSI-2 DPHY deserializer
-Evkit, or user-designed, board can be connected to this port. This SAMTEC
+Evkit, or user-designed board can be connected to this port. This SAMTEC
 connector has 2x 1x4 CSI-2 DPHY ports connected directly to the Jetson SoM
 inputs. Additionally, this connector can supply power, an I2C connection to the
 Jetson, and GPIO connections to the Jetson to control things like frame sync, or
@@ -753,17 +765,17 @@ power down signals, for instance.</p>
 <h3>CSI Input to Jetson SoM<a class="headerlink" href="#csi-input-to-jetson-som" title="Link to this heading"></a></h3>
 <p>Depending on whether you are using camera
 modules through the onboard MAX96724, or an Evkit connected to the onboard CSI
-SAMTEC connector, or both, you will need to know which CSI input port to the
-Jetson is connected. The below graphic shows which CSI Ports on the Jetson go
-to which video inputs to the AD-GMSL522-SL board.</p>
+SAMTEC connector, or both, you will need to know to which CSI input port the Jetson
+is connected. The below graphic shows which CSI Ports on the Jetson go
+to which video inputs to the AD-GMSL522-SL Board.</p>
 <p>For more specifics about CSI connections, refer to <a class="reference internal" href="../hardware-guide/index.html#ad-gmsl522-sl-hardware"><span class="std std-ref">Hardware Guide</span></a>.</p>
 </section>
 <section id="i2c-busses">
 <h3>I2C Busses<a class="headerlink" href="#i2c-busses" title="Link to this heading"></a></h3>
 <p>The Jetson has many different possible I2C busses and
 therefore it is important to know which I2C bus connects to where on
-AD-GMSL522-SL board. For more specifics about the I2C busses on AD-GMSL522-SL
-board, refer to <a class="reference internal" href="../hardware-guide/index.html#ad-gmsl522-sl-hardware"><span class="std std-ref">Hardware Guide</span></a>.</p>
+the AD-GMSL522-SL Board. For more specifics about the I2C busses on
+the AD-GMSL522-SL Board, refer to <a class="reference internal" href="../hardware-guide/index.html#ad-gmsl522-sl-hardware"><span class="std std-ref">Hardware Guide</span></a>.</p>
 </section>
 </section>
 <section id="first-time-setup-getting-started">
@@ -771,12 +783,12 @@ board, refer to <a class="reference internal" href="../hardware-guide/index.html
 <section id="assembling-the-som-to-the-board">
 <h3>Assembling the SoM to the Board<a class="headerlink" href="#assembling-the-som-to-the-board" title="Link to this heading"></a></h3>
 <ol class="arabic simple">
-<li><p>First, attach the heatsink to the SOM.</p></li>
-<li><p>Next, plug in the SOM to the AD-GMSL522-SL board at an angle, and once the
-SOM is seated into the connector, push the SOM down until it is parallel with
-the carrier board, at which point the locks should engage to keep the SOM at
+<li><p>First, attach the heatsink to the SoM.</p></li>
+<li><p>Next, plug in the SoM to the AD-GMSL522-SL Board at an angle, and once the
+SoM is seated into the connector, push the SoM down until it is parallel with
+the carrier board, at which point the locks should engage to keep the SoM at
 a certain position.</p></li>
-<li><p>Install standoffs to keep SOM safely in a firm and locked position.</p></li>
+<li><p>Install standoffs to keep SoM safely in a firm and locked position.</p></li>
 </ol>
 </section>
 <section id="flashing-the-ad-gmsl522-sl-board">
@@ -799,29 +811,85 @@ libraries:</p>
 </pre></div>
 </div>
 <div class="clear-left"></div></div></div></div>
-<p>First, your Linux PC needs to be
+<p>First, your Linux PC (or Windows PC with WSL) needs to be
 configured to be able to flash Jetson devices. To do this, follow NVIDIA’s
 documentation to install and run their “SDK Manager” program:
-<a class="icon link reference external" href="https://docs.nvidia.com/sdk-manager/download-run-sdkm/index.html" target="_blank">https://docs.nvidia.com/sdk-manager/download-run-sdkm/index.html</a> Now, let’s
-begin with flashing the AD-GMSL522-SL image onto the NVIDIA Xavier SOM. Follow
-the next steps to do so:</p>
+<a class="icon link reference external" href="https://docs.nvidia.com/sdk-manager/download-run-sdkm/index.html" target="_blank">https://docs.nvidia.com/sdk-manager/download-run-sdkm/index.html</a></p>
+<p>Now, let’s begin with flashing the AD-GMSL522-SL image onto the NVIDIA Xavier NX SoM.
+Follow the next steps to do so:</p>
 <ol class="arabic">
-<li><p>With the power off, place jumpers to short pins 3-4 on the P11 header to
-force USB Recovery Mode for the Jetson Xavier. See below picture for a
-diagram showing jumpers to be shorted. Pins 9-10 should always be shorted.</p></li>
-<li><p>Plug in the power and programming cables to the AD-GMSL522-SL board by
-following the below picture.</p></li>
+<li><p>With the power off, place jumpers to short pins 3-4 on the P11 header. This will
+force USB Recovery Mode for the Jetson Xavier NX. See the picture below for a
+diagram showing the jumpers to be shorted. Pins 9-10 should always be shorted.</p>
+<figure class="align-default" id="id2">
+<img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/step1.png" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/step1.png" />
+<figcaption>
+<p><span class="caption-number">Figure 2 </span><span class="caption-text">Jumpers Placement For Flashing</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>Plug in the power and programming cables to the AD-GMSL522-SL Board by
+following the picture below. A MicroUSB cable should be connected to the
+P6 port, and 12V should be supplied on the P9 port. Use the S6 switch to
+power on the board.</p>
+<figure class="align-default" id="id3">
+<img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/step2.png" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/step2.png" />
+<figcaption>
+<p><span class="caption-number">Figure 3 </span><span class="caption-text">Cabling Configuration For Flashing</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</li>
 <li><p>Untar, or extract, the image that was downloaded in the “Required Software”
-section of this document</p>
+section of this document.</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>tar<span class="w"> </span>-xvf<span class="w"> </span>&lt;filename&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>tar<span class="w"> </span>-xvf<span class="w"> </span>&lt;file<span class="w"> </span>name&gt;
 </pre></div>
 </div>
 <div class="clear-left"></div></div></div></li>
-<li><p>Change working directory to the new directory created during the untar process.</p></li>
-<li><p>On the host pc (this must be done with a Linux OS), run the following command to flash the Jetson SoM.</p>
+<li><p>Change the working directory to the new directory created during the untar process.</p></li>
+<li><p>Run the following commands in order to install a few necessary packages (in case they are not already installed on the host PC).</p>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>lz4<span class="w"> </span>libxml2-utils<span class="w"> </span>cpio<span class="w"> </span>dosfstools
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div></li>
+<li><p><strong>(Optional)</strong> If using WSL (instead of native Linux), create a <code class="docutils literal notranslate"><span class="pre">.ps1</span></code> file which contains the following script.
+Then, open an <strong>Administrator</strong> PowerShell terminal on Windows, and execute the script file. This script essentially
+keeps the USB port that is associated to the board attached to WSL because the connection becomes unstable during the flashing
+process, thus hindering it.</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nv">$vid</span> <span class="p">=</span> <span class="s2">&quot;0955&quot;</span>
+
+<span class="nb">Write-Host</span> <span class="s2">&quot;Watching for NVIDIA devices (VID:$vid) to auto-attach to WSL...&quot;</span>
+<span class="nb">Write-Host</span> <span class="s2">&quot;Press Ctrl+C to stop.&quot;</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="nv">$true</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="nv">$lines</span> <span class="p">=</span> <span class="n">usbipd</span> <span class="n">list</span> <span class="n">2</span><span class="p">&gt;</span><span class="nv">$null</span> <span class="p">|</span> <span class="nb">Select-String</span> <span class="nv">$vid</span>
+   <span class="k">foreach</span> <span class="p">(</span><span class="nv">$line</span> <span class="k">in</span> <span class="nv">$lines</span><span class="p">)</span>
+   <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nv">$line</span> <span class="o">-match</span> <span class="s2">&quot;^(\d+-\d+)\s+&quot;</span> <span class="o">-and</span> <span class="nv">$line</span> <span class="o">-notmatch</span> <span class="s2">&quot;Attached&quot;</span><span class="p">)</span>
+      <span class="p">{</span>
+         <span class="nv">$busid</span> <span class="p">=</span> <span class="nv">$Matches</span><span class="p">[</span><span class="n">1</span><span class="p">]</span>
+         <span class="nb">Write-Host</span> <span class="s2">&quot;[</span><span class="p">$(</span><span class="nb">Get-Date</span> <span class="n">-Format</span> <span class="s1">&#39;HH:mm:ss&#39;</span><span class="p">)</span><span class="s2">] Binding and attaching $busid...&quot;</span>
+         <span class="n">usbipd</span> <span class="n">bind</span> <span class="p">-</span><span class="n">-busid</span> <span class="nv">$busid</span> <span class="n">2</span><span class="p">&gt;</span><span class="nv">$null</span>
+         <span class="n">usbipd</span> <span class="n">attach</span> <span class="p">-</span><span class="n">-wsl</span> <span class="p">-</span><span class="n">-busid</span> <span class="nv">$busid</span> <span class="n">2</span><span class="p">&gt;</span><span class="nv">$null</span>
+         <span class="nb">Write-Host</span> <span class="s2">&quot;[</span><span class="p">$(</span><span class="nb">Get-Date</span> <span class="n">-Format</span> <span class="s1">&#39;HH:mm:ss&#39;</span><span class="p">)</span><span class="s2">] Attached $busid&quot;</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+   <span class="nb">Start-Sleep</span> <span class="n">-Milliseconds</span> <span class="n">500</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The AD-GMSL522-SL Board will appear under the name <code class="docutils literal notranslate"><span class="pre">APX</span></code> when running the <code class="docutils literal notranslate"><span class="pre">usbipd</span> <span class="pre">list</span></code> command in PowerShell.</p>
+</div>
+</li>
+<li><p>On the host PC (this must be done with a Linux OS or using WSL), run the following command to flash the Jetson SoM.</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
@@ -834,15 +902,23 @@ section of this document</p>
 <li><p>“The target t186ref has been flashed properly.”</p></li>
 </ul>
 </li>
-<li><p>Reset the board to boot from internal eMMC via:
-- Power down the board, and remove the FORCE_REC jumpered pin and remove the USB connection
-- Power cycle the board.  Note the fan will run and stop depending on the load level</p></li>
-<li><p>Power cycle the AD-GMSL522-SL board.</p></li>
+<li><p>Reset the board to boot from internal eMMC:</p>
+<ul class="simple">
+<li><p>Power down the board by using the S6 switch.</p></li>
+<li><p>Remove the jumper from pins 3-4 on the P11 header (FORCE_REC jumpered pin).</p></li>
+<li><p>Remove the MicroUSB connection.</p></li>
+<li><p>Power cycle the board.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The fan will start and stop running depending on the load level.</p>
+</div>
+</li>
 </ol>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>It is very important at this point not to run automatic installing
-commands like apt-get update because the current viper file system was created
+<p>It is very important at this point not to run automatic installation
+commands like <code class="docutils literal notranslate"><span class="pre">apt-get</span> <span class="pre">update</span></code> because the current viper file system was created
 with an older version of JetPack – 5.3.1.</p>
 </div>
 </section>
@@ -856,21 +932,21 @@ the MAX96724 and MAX96717 are configured in the following way:</p>
 <ul class="simple">
 <li><p>6 Gbps Forward Link Speed (Both MAX96724 and MAX96717)</p></li>
 <li><p>I2C communication method (instead of UART) (Both MAX96724 and MAX96717)</p></li>
-<li><p>8-Bit I2C Address 0x4E (MAX96724)</p></li>
-<li><p>8-bit I2C Address 0x84 (MAX96717)</p></li>
+<li><p>8-bit I2C address 0x4E (MAX96724)</p></li>
+<li><p>8-bit I2C address 0x84 (MAX96717)</p></li>
 </ul>
 </div>
-<p>The digital potentiometers on the AD-GMSL522-SL board control the voltage that
+<p>The digital potentiometers on the AD-GMSL522-SL Board control the voltage that
 is sent to the configuration pins of the GMSL devices, and therefore, control
 which mode the GMSL devices are booted up in. Learn more about the configuration
 pins in the MAX96724 or the MAX96717 datasheets. To update or change these
-voltages run the following script. This should be run once when the board is
+voltages, run the following script. This should be run once when the board is
 first received, and again any time a change to the digital potentiometer output
 voltage is required. The potentiometers will save the configuration in their
 EEPROM, so it is not required to run this script after every reboot.</p>
 <ol class="arabic">
-<li><p>Change directory where the vr_config.sh script is located.</p></li>
-<li><p>On the AD-GMSL522-SL board, execute the vr_config.sh script to update the
+<li><p>Change the directory to where the <code class="docutils literal notranslate"><span class="pre">vr_config.sh</span></code> script is located.</p></li>
+<li><p>On the AD-GMSL522-SL Board, execute the <code class="docutils literal notranslate"><span class="pre">vr_config.sh</span></code> script to update the
 potentiometers:</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
@@ -883,40 +959,40 @@ potentiometers:</p>
 </section>
 <section id="how-to-change-configuration-pin-voltages-for-onboard-serdes">
 <h3>How to Change Configuration Pin Voltages for Onboard SERDES<a class="headerlink" href="#how-to-change-configuration-pin-voltages-for-onboard-serdes" title="Link to this heading"></a></h3>
-<p>Below is an example of the digital potentiometer circuit on the AD-GMSL522-SL board. As
-you can see, the digital pot sets the point along the internal where the
+<p>Below is an example of the digital potentiometer circuit on the AD-GMSL522-SL Board. As
+you can see, the digital pot sets the point along the internal resistor where the
 voltage is measured. Because the internal resistor of the potentiometer is
 200k, the pullup and pulldown resistors on the H and L pins have almost no
 effect and can therefore be ignored. With this in mind, it can be stated that
-the voltage see on the configuration pins of the SERDES is almost exactly the
-voltage set by the programming of the potentiometer between 0 and 255. i.e.,
+the voltage seen on the configuration pins of the SERDES is almost exactly the
+voltage set by the programming of the potentiometer between 0 and 255, i.e.,
 the voltage on the configuration pin can be summarized by this equation:</p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
-\[CFG(V)=VDDIO*ProgrammedValue\]</div>
+\[CFG(V)=VDDIO \times ProgrammedValue\]</div>
 </div>
-<p>Where: ProgrammedValue is a hex value between 0 and 255 and is set per device in the vr_config file.</p>
+<p>Where: ProgrammedValue is a hex value between 0x00 (0) and 0xFF (255) and is set per device in the <code class="docutils literal notranslate"><span class="pre">vr_config.sh</span></code> file.</p>
 <p>A snippet of the configuration file is shown below. Additionally, there are comments in the
 configuration file to give example hex values to set for different
 configuration profiles at the bottom of the file.</p>
-<figure class="align-default" id="id2">
+<figure class="align-default" id="id4">
 <img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/vr_config.png" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/vr_config.png" />
 <figcaption>
-<p><span class="caption-number">Figure 2 </span><span class="caption-text">Pin Voltages Configuration</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 4 </span><span class="caption-text">Pin Voltages Configuration</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="updating-changing-device-tree-blobs-boot-modes">
 <h3>Updating/Changing Device Tree Blobs (boot modes)<a class="headerlink" href="#updating-changing-device-tree-blobs-boot-modes" title="Link to this heading"></a></h3>
-<p>Multiple different device tree blobs (dtbs) are available for AD-GMSL522-SL user’s convenience.
-They each have a separate use. For example, one dtb will allow any™ sensor
-resolution to be streamed to AD-GMSL522-SL but the user will need to program
+<p>Multiple different device tree blobs (dtbs) are available for AD-GMSL522-SL users’ convenience.
+They each have a separate use. For example, one dtb will allow any sensor
+resolution to be streamed to the AD-GMSL522-SL Board but the user will need to program
 the SERDES and sensor themselves. Another dtb, however, will only allow a
 certain sensor to be streamed and viewed with the Jetson, but the sensor and
 SERDES programming will be executed at power up and is not configurable. To
 change the dtb to boot from, follow these steps:</p>
 <ol class="arabic">
-<li><p>Using a text editor on the AD-GMSL522-SL board, open the /boot/extlinux/extlinux.conf file as root:</p>
+<li><p>Using a text editor on the AD-GMSL522-SL Board, open the <code class="docutils literal notranslate"><span class="pre">/boot/extlinux/extlinux.conf</span></code> file as root:</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
@@ -924,22 +1000,53 @@ change the dtb to boot from, follow these steps:</p>
 </pre></div>
 </div>
 <div class="clear-left"></div></div></div></li>
-<li><p>Find the line that specifies the dtb to boot from. This line “FDT /boot/dtb/tegra194-p3668-0001-viper-reva-gmsl-1.dtb” where the “-1” could be any value depending on what you are using now.</p></li>
-<li><p>Change the “-X”, where the “X” is a value dependent on what you are using now, to whichever version you would like. The currently supported dtbs are shown below:</p></li>
+<li><p>Find the line that specifies the dtb to boot from. Look for the line “FDT /boot/dtb/tegra194-p3668-0001-gmsl522-revb-gmsl-0.dtb” where the “-0” could be any value depending on what you are using now.</p></li>
+<li><p>Change the “-X”, where the “X” is a value dependent on what you are using now, to whichever version you would like. The currently supported dtbs are shown below:</p>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 45.0%" />
+<col style="width: 45.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Suffix</p></th>
+<th class="head"><p>DTB Filename</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-0</span></code></p></td>
+<td><p>tegra194-p3668-0001-gmsl522-revb-gmsl-0.dtb</p></td>
+<td><p>AD-GMSL522-SL + IMX219</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-1</span></code></p></td>
+<td><p>tegra194-p3668-0001-gmsl522-revb-gmsl-1.dtb</p></td>
+<td><p>AD-GMSL522-SL + OX03A</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-3</span></code></p></td>
+<td><p>tegra194-p3668-0001-gmsl522-revb-gmsl-3.dtb</p></td>
+<td><p>AD-GMSL522-SL + GMSL GUI</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-4</span></code></p></td>
+<td><p>tegra194-p3668-0001-gmsl522-revb-gmsl-4.dtb</p></td>
+<td><p>AD-GMSL522-SL + GMSL GUI - 2.5Gbps</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
 </ol>
 <p>For more information on how to create your own device trees, or modify the
-AD-GMSL522-SL Kernel for your own custom use case, see the <a class="icon git reference external" href="https://github.com/analogdevicesinc/nvidia/tree/main/" target="_blank">nvidia</a> repository.</p>
+AD-GMSL522-SL Kernel for your own custom use case, see the <a class="icon git reference external" href="https://github.com/analogdevicesinc/nvidia/tree/main/../gmsl/jetson_35.3.1/hardware_nvidia_platform_t19x_gmsl522_kernel-dtb" target="_blank">adi-nvidia</a> repository.</p>
 </section>
 <section id="verify-proper-flashing-setup">
 <h3>Verify Proper Flashing/Setup<a class="headerlink" href="#verify-proper-flashing-setup" title="Link to this heading"></a></h3>
 <p>Once the Jetson has been flashed and
 the configuration pins of the SERDES have been properly updated, you should be
-able to probe the i2c bus of the AD-GMSL522-SL board and see the SERDES there.
+able to probe the I2C bus of the AD-GMSL522-SL Board and see the SERDES there.
 Open a terminal and run the following command:</p>
-<div class="code-shell"><div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#Reads all devices on the I2C Bus #1.</span>
-</pre></div>
-</div>
-<div class="clear-left"></div></div><div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#If a device is detected, its 7-bit address is noted</span>
+<div class="code-shell"><div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#Reads all devices on the I2C Bus #1 (if a device is detected, its 7-bit address is noted).</span>
 </pre></div>
 </div>
 <div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
@@ -949,11 +1056,11 @@ Open a terminal and run the following command:</p>
 </pre></div>
 </div>
 <div class="clear-left"></div></div></div><p>If the board and SERDES are properly configured, you should see the following:</p>
-<figure class="align-default" id="id3">
+<figure class="align-default" id="id5">
 <a class="reference internal image-reference" href="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/i2cdetect.jpg"><img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/i2cdetect.jpg" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/i2cdetect.jpg" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Figure 3 </span><span class="caption-text">Verifying SERDES Configuration</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 5 </span><span class="caption-text">Verifying SERDES Configuration</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -965,7 +1072,7 @@ Open a terminal and run the following command:</p>
 practice to disable the MAX96717 local control channel. This way, I2C
 communication will not be duplicated and only sent to the MAX96717 via the
 GMSL link. To do this, set register bit 5 in register 0x0001 HIGH. For
-example, if operating the max96717 in 6G mode, set register 0x0001 == 0x28.</p></li>
+example, if operating the MAX96717 in 6G mode, set register 0x0001 == 0x28.</p></li>
 <li><p>The MAX96724 has two MIPI ports. One of these ports is connected to the Jetson
 while the other port is connected to the MAX96717. Specifically, MIPI Port B
 is connected to the Jetson, while MIPI Port A is connected to the MAX96717.
@@ -980,34 +1087,34 @@ to the Jetson, for example.</p></li>
 </section>
 <section id="streaming-video-data-via-generic-sensor-driver">
 <h2>Streaming Video Data via “Generic Sensor Driver”<a class="headerlink" href="#streaming-video-data-via-generic-sensor-driver" title="Link to this heading"></a></h2>
-<p>The “generic sensor driver” device tree of the AD-GMSL522-SL board allows a user
+<p>The “generic sensor driver” device tree of the AD-GMSL522-SL Board allows a user
 to stream any resolution camera and any sort of MIPI CSI-2 datatype, within the
-capabilities of the jetson. There is one limitation to this tool, and it is that
+capabilities of the Jetson. There is one limitation to this tool, and it is that
 no embedded data may be used. Future device trees will allow different numbers
 of embedded data at the TOP of the image frame but are currently unavailable.
 The Jetson, as of writing this, does not currently support any embedded data at
 the BOTTOM of the image frame. To utilize this tool, the SERDES and the
 accompanying image sensors must be programmed by the user. This can be done in a
-number of ways: The GMSL GUI connected directly to an evkit, the GMSL GUI
-connected through the AD-GMSL522-SL board, the “GMSL User Space Drivers”, or any
+number of ways: The GMSL GUI connected directly to an Evkit, the GMSL GUI
+connected through the AD-GMSL522-SL Board, the “GMSL User Space Drivers”, or any
 other user-defined way. In general, the sensor can be streamed by following the
 below steps:</p>
 <ol class="arabic">
 <li><p>Program the SERDES</p>
 <ul class="simple">
-<li><p>One way to do this is to open the GMSL server on AD-GMSL522-SL board, and
-run the GUI via a user’s PC</p></li>
-<li><p>Using the “CSI Configuration Tool” in the GMSL GUI, generate a SERDES script</p></li>
-<li><p>Program the SERDES using the “Load (.CPP) File” tool</p></li>
+<li><p>One way to do this is to open the GMSL server on the AD-GMSL522-SL Board, and
+run the GUI via a user’s PC.</p></li>
+<li><p>Using the “CSI Configuration Tool” in the GMSL GUI, generate a SERDES script.</p></li>
+<li><p>Program the SERDES using the “Load (.CPP) File” tool.</p></li>
 </ul>
 </li>
 <li><p>Program the Image Sensor</p>
 <ul class="simple">
 <li><p>This step will require the user to have a set of register writes to program
-the sensor and cause it to stream video data. There are few ways to get
+the sensor and cause it to stream video data. There are a few ways to get
 this data but normally it can be acquired from the image sensor vendor.</p></li>
 <li><p>Program the Image Sensor. If the register writes are configured in the same
-way that that the SERDES register writes are, i.e., in a .cpp format, the
+way that the SERDES register writes are, i.e., in a <code class="docutils literal notranslate"><span class="pre">.cpp</span></code> format, the
 GMSL GUI can be used to program the sensor, again, using the “Load (.CPP) File” tool.</p></li>
 </ul>
 </li>
@@ -1041,8 +1148,8 @@ command can be executed:</p>
 <li><p>Stream</p>
 <ul>
 <li><p>Once the pipeline is properly configured to the incoming data, the video
-viewer, qv4l2 should be called. However, which CSI input to the
-Jetson being used, needs to be specified.
+viewer, qv4l2, should be called. However, it must be specified which CSI
+input of the Jetson is being used.
 See the following command:</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
@@ -1053,9 +1160,9 @@ See the following command:</p>
 <div class="clear-left"></div></div></div><ul class="simple">
 <li><p>The following video devices should be used depending on which MIPI Input is used:</p>
 <ul>
-<li><p>QTH SAMTEC MIPI Port A: /dev/video0</p></li>
-<li><p>QTH SAMTEC MIPI Port B: /dev/video1</p></li>
-<li><p>MAX96724 MIPI Port B: /dev/video2</p></li>
+<li><p>QTH SAMTEC MIPI Port A: <code class="docutils literal notranslate"><span class="pre">/dev/video0</span></code></p></li>
+<li><p>QTH SAMTEC MIPI Port B: <code class="docutils literal notranslate"><span class="pre">/dev/video1</span></code></p></li>
+<li><p>MAX96724 MIPI Port B: <code class="docutils literal notranslate"><span class="pre">/dev/video2</span></code></p></li>
 </ul>
 </li>
 <li><p>Click the green “Play” button to stream the video (see image below)</p></li>
@@ -1066,33 +1173,33 @@ will override what was done in the previous step.</p></li>
 </ul>
 </li>
 </ol>
-<figure class="align-default" id="id4">
+<figure class="align-default" id="id6">
 <img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/better_v4l2_thing.jpg" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/better_v4l2_thing.jpg" />
 <figcaption>
-<p><span class="caption-number">Figure 4 </span><span class="caption-text">Video Viewer Play Button</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 6 </span><span class="caption-text">Video Viewer Play Button</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="loopback-testing-and-exercises">
 <h2>Loopback Testing and Exercises<a class="headerlink" href="#loopback-testing-and-exercises" title="Link to this heading"></a></h2>
-<p>For the following two sub sections, connect your AD-GMSL522-SL board in the
+<p>For the following two subsections, connect your AD-GMSL522-SL Board in the
 following way. Some of these components may not be necessary depending on how
 you have your system setup. For instance, if you are using NoMachine, an
-external display is not necessary. An ethernet is not explicitly needed for this
-exercise unless a connection to the internet, or an intranet for use of
-NoMachine or another VNC. It is important to have a coax cable connected between
+external display is not necessary. An Ethernet connection is not explicitly needed for this
+exercise unless a connection to the internet, an intranet for use of
+NoMachine, or another VNC is used. It is important to have a coax cable connected between
 the MAX96717 output and the MAX96724 “A” input.</p>
-<figure class="align-default" id="id5">
+<figure class="align-default" id="id7">
 <img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/viper_block_diagram_using_loopback_section.png" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/viper_block_diagram_using_loopback_section.png" />
 <figcaption>
-<p><span class="caption-number">Figure 5 </span><span class="caption-text">Loopback Testing Setup</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 7 </span><span class="caption-text">Loopback Testing Setup</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <section id="looping-back-the-onboard-max96717-to-the-onboard-max96724-streaming-a-checkerboard-pattern-from-the-max96717">
 <h3>Looping back the Onboard MAX96717 to the Onboard MAX96724 (streaming a checkerboard pattern from the MAX96717)<a class="headerlink" href="#looping-back-the-onboard-max96717-to-the-onboard-max96724-streaming-a-checkerboard-pattern-from-the-max96717" title="Link to this heading"></a></h3>
 <p>In this exercise, the functionality of both the MAX96717 and the MAX96724 on the
-AD-GMSL522-SL board will be exercised. The MAX96717 will uses its internal
-pattern generator functionality to build a checkboard pattern and then send that
+AD-GMSL522-SL Board will be exercised. The MAX96717 will use its internal
+pattern generator functionality to build a checkerboard pattern and then send that
 pattern to the MAX96724 which will pass that pattern along to the Jetson to be
 viewed. This exercise will utilize the following:</p>
 <ul>
@@ -1105,24 +1212,25 @@ viewed. This exercise will utilize the following:</p>
 </div></blockquote>
 </li>
 <li><p>qv4l2 on the Jetson</p></li>
-<li><p>Device Tree “-3”  to allow generic input video stream resolutions, datatypes,
-and frame rates. Make sure to update the extconf.txt file.
-If you do not know how to do this, refer back to this section.</p></li>
+<li><p>Device Tree “-3” to allow generic input video stream resolutions, datatypes,
+and frame rates. Make sure to update the <code class="docutils literal notranslate"><span class="pre">extlinux.conf</span></code> file.
+If you do not know how to do this, refer back to the
+<a class="reference internal" href="#updating-changing-device-tree-blobs-boot-modes">Updating/Changing Device Tree Blobs (boot modes)</a> section.</p></li>
 </ul>
 <p>Follow these steps to stream the pattern generator tool on the AD-GMSL522-SL
-board:</p>
+Board:</p>
 <p>To start, set up your hardware like in the diagram below. Depending on whether
 or not you are using NoMachine or some other remote-viewing software, your
 setup may differ. The critical part is that there is a COAX cable connected
 between the MAX96717 output, and the MAX96724 input “A”.</p>
-<figure class="align-default" id="id6">
+<figure class="align-default" id="id8">
 <img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/viper_pattern_generator_setup.png" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/viper_pattern_generator_setup.png" />
 <figcaption>
-<p><span class="caption-number">Figure 6 </span><span class="caption-text">Pattern Generator Test Setup</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 8 </span><span class="caption-text">Pattern Generator Test Setup</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <ol class="arabic">
-<li><p>On the AD-GMSL522-SL board, start the GMSL server:</p>
+<li><p>On the AD-GMSL522-SL Board, start the GMSL server:</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
@@ -1145,14 +1253,14 @@ need this step to get to the next step)</p></li>
 </li>
 </ul>
 </li>
-<li><p>You can verify your by checking it against the script in the proper appendix.</p></li>
-<li><p>Use that script to program the SERDES using the Load (.CPP) function the GMSL GUI.</p></li>
-<li><p>Now, open the “Video Timing and Pattern Generator” Tool in the GUI</p></li>
+<li><p>You can verify your script by checking it against the script in the proper appendix.</p></li>
+<li><p>Use that script to program the SERDES using the Load (.CPP) function of the GMSL GUI.</p></li>
+<li><p>Now, open the “Video Timing and Pattern Generator” Tool in the GUI.</p></li>
 <li><p>Set the parameters of the tool to match what is shown below:</p>
-<figure class="align-default" id="id7">
+<figure class="align-default" id="id9">
 <img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/viper_video_pattern_generator.png" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/viper_video_pattern_generator.png" />
 <figcaption>
-<p><span class="caption-number">Figure 7 </span><span class="caption-text">Video Pattern Generator Settings</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 9 </span><span class="caption-text">Video Pattern Generator Settings</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </li>
@@ -1161,35 +1269,47 @@ need this step to get to the next step)</p></li>
 <p>If everything has been done correctly up to this point, MIPI data should be
 leaving the MAX96724 from MIPI Port B and going to the Jetson. This can be
 verified by reading register 0x08D1 in the MAX96724. If the register value is
-toggling, you know data is outputting the deserializer.</p>
-<ul class="simple">
-<li><p>Configure the jetson to expect an input resolution of 1920x1080 and RAW12 pixel format
-- v4l2-ctl –device /dev/video2 –set-fmt-video=width=1920,height=1080,pixelformat=AR24</p></li>
-<li><p>Start the video streaming application, qv4l2, from video device 2
-- qv4l2 -d /dev/video2</p></li>
+toggling, you know data is being output by the deserializer.</p>
+<ul>
+<li><p>Configure the Jetson to expect an input resolution of 1920x1080 and RGB888 pixel format:</p>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>v4l2-ctl<span class="w"> </span>--device<span class="w"> </span>/dev/video2<span class="w"> </span>--set-fmt-video<span class="o">=</span><span class="nv">width</span><span class="o">=</span><span class="m">1920</span>,height<span class="o">=</span><span class="m">1080</span>,pixelformat<span class="o">=</span>AR24
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div></li>
+<li><p>Start the video streaming application, qv4l2, from video device 2:</p>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>qv4l2<span class="w"> </span>-d<span class="w"> </span>/dev/video2
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div></li>
 <li><p>Click the green play button to begin streaming the checkerboard.</p></li>
 </ul>
-<p>At this point, a black and white checkboard should be shown on the display.
+<p>At this point, a black and white checkerboard should be shown on the display.
 Because the pattern generator builds a static image, it will look like the frame
 is frozen. Your screen should look similar to this:</p>
-<figure class="align-default" id="id8">
+<figure class="align-default" id="id10">
 <a class="reference internal image-reference" href="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/gmsl_gui_pattern_generator_output_showing.png"><img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/gmsl_gui_pattern_generator_output_showing.png" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/gmsl_gui_pattern_generator_output_showing.png" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Figure 8 </span><span class="caption-text">Pattern Generator Output</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 10 </span><span class="caption-text">Pattern Generator Output</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 </section>
 <section id="debugging-csi-input-to-ad-gmsl522-sl-board">
 <h2>Debugging CSI Input to AD-GMSL522-SL Board<a class="headerlink" href="#debugging-csi-input-to-ad-gmsl522-sl-board" title="Link to this heading"></a></h2>
-<p>If the SERDES and Sensor are properly programmed, and CSI data is going to the
+<p>If the SERDES and sensor are properly programmed, and CSI data is going to the
 Jetson, you can use the following technique to attempt to debug. To see the
 low-level details of the MIPI interface to the Jetson, we must enable tracing.
 Follow these steps to see the trace details:</p>
 <ol class="arabic">
 <li><p>Enable tracing. This step must be done as a ‘super user’. Even creating the
-file must be done as a super user.</p>
+file must be done as a ‘super user’.</p>
 <ul>
 <li><p>Become a super user</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
@@ -1199,7 +1319,7 @@ file must be done as a super user.</p>
 </pre></div>
 </div>
 <div class="clear-left"></div></div></div></li>
-<li><p>Create a shell script with the following contents (e.g., (vim enable_tracing.sh):</p>
+<li><p>Create a shell script with the following contents (e.g., <code class="docutils literal notranslate"><span class="pre">vim</span> <span class="pre">enable_tracing.sh</span></code>):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
 
 sudo<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>&gt;<span class="w"> </span>/sys/kernel/debug/tracing/tracing_on<span class="w"> </span>sudo<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="m">30720</span><span class="w"> </span>&gt;
@@ -1224,42 +1344,49 @@ sudo<span class="w"> </span>cat<span class="w"> </span>/sys/kernel/debug/tracing
 </li>
 </ul>
 </li>
-<li><p>Make this file executable</p>
+<li><p>Make this file executable:</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span>+x<span class="w"> </span>&lt;file<span class="w"> </span>name&gt;<span class="w"> </span><span class="o">(</span>E.g.<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>enable_tracing.sh<span class="o">)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span>+x<span class="w"> </span>&lt;file<span class="w"> </span>name&gt;
 </pre></div>
 </div>
-<div class="clear-left"></div></div></div></li>
-<li><p>Execute the script</p>
+<div class="clear-left"></div></div></div><p>(e.g. <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">enable_tracing.sh</span></code>)</p>
+</li>
+<li><p>Execute the script:</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>enable_tracing.sh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./enable_tracing.sh
 </pre></div>
 </div>
 <div class="clear-left"></div></div></div></li>
 <li><p>Now enable streaming using qv4l2, for instance.</p></li>
-<li><p>Let the stream run for a several seconds to collect enough data</p></li>
-<li><p>Save the trace logs</p></li>
-<li><p>cat /sys/kernel/debug/tracing/trace &gt; trace_output.txt</p></li>
-<li><p>View the logs</p></li>
+<li><p>Let the stream run for a few seconds to collect enough data.</p></li>
+<li><p>Save the trace logs:</p>
+<div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>/sys/kernel/debug/tracing/trace<span class="w"> </span>&gt;<span class="w"> </span>trace_output.txt
+</pre></div>
+</div>
+<div class="clear-left"></div></div></div></li>
+<li><p>View the logs.</p></li>
 </ol>
 <p>The error codes can be found in the logs. Here is one example:</p>
-<figure class="align-default" id="id9">
+<figure class="align-default" id="id11">
 <img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/viper_debugging_csi_shortframe.png" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/viper_debugging_csi_shortframe.png" />
 <figcaption>
-<p><span class="caption-number">Figure 9 </span><span class="caption-text">CSI Input Error Log Example</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 11 </span><span class="caption-text">CSI Input Error Log Example</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Additionally, the Orin Technical Reference Manual (TRM) can be found on NVIDIA’s
 collateral site to get more information on the errors. This is an excerpt from
 the TRM:</p>
-<figure class="align-default" id="id10">
+<figure class="align-default" id="id12">
 <img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/viper_debugging_csi_orin_trm.png" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/viper_debugging_csi_orin_trm.png" />
 <figcaption>
-<p><span class="caption-number">Figure 10 </span><span class="caption-text">CSI Input Error Information</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 12 </span><span class="caption-text">CSI Input Error Information</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>More info on this technique and what the trace is saying can be found here:
@@ -1270,16 +1397,16 @@ the TRM:</p>
 <section id="viewing-ad-gmsl522-sl-remotely-using-nomachine">
 <h3>Viewing AD-GMSL522-SL Remotely Using NoMachine<a class="headerlink" href="#viewing-ad-gmsl522-sl-remotely-using-nomachine" title="Link to this heading"></a></h3>
 <p>NoMachine allows users to connect to any computer with very little latency and
-high resolution. This is recommended to be used because of the common use case
+high resolution. This is recommended to be used because the common use case
 of viewing video data requires low latency and high-resolution video. Compared
 to other remote desktop viewers, NoMachine has much higher quality video
 streaming. To install NoMachine on your AD-GMSL522-SL Board and Host PC, follow
-this tutorial from Jetsonhacks: <a class="icon link reference external" href="https://jetsonhacks.com/2023/12/03/nomachine-jetson-remote-desktop/" target="_blank">https://jetsonhacks.com/2023/12/03/nomachine-jetson-remote-desktop/</a>
+this tutorial from JetsonHacks: <a class="icon link reference external" href="https://jetsonhacks.com/2023/12/03/nomachine-jetson-remote-desktop/" target="_blank">https://jetsonhacks.com/2023/12/03/nomachine-jetson-remote-desktop/</a>
 or view their own documentation at: <a class="icon link reference external" href="https://www.nomachine.com/" target="_blank">https://www.nomachine.com/</a></p>
 </section>
 <section id="booting-from-nvme">
 <h3>Booting from NVMe<a class="headerlink" href="#booting-from-nvme" title="Link to this heading"></a></h3>
-<p>The default memory module on the Jetson Xavier is only 16 GB large. Given the
+<p>The default memory module on the Jetson Xavier NX is only 16 GB large. Given the
 fact that the AD-GMSL522-SL GMSL kernel is already ~14 GB large, there is not
 much space left to do anything useful. One way to remedy this situation is to
 buy and use an NVMe. NVMe is typically much faster than the internal eMMC of the
@@ -1296,9 +1423,9 @@ to boot from NVMe.</p>
 <p><a href="https://www.youtube.com/watch?v=ZK5FYhoJqIg"><span>https://www.youtube.com/watch?v=ZK5FYhoJqIg</span></a></p>
 </div></div></section>
 <section id="booting-from-sd-card">
-<h3>Booting From SD Card<a class="headerlink" href="#booting-from-sd-card" title="Link to this heading"></a></h3>
+<h3>Booting from SD Card<a class="headerlink" href="#booting-from-sd-card" title="Link to this heading"></a></h3>
 <p>Boot via SD card will be done the same way as an NVMe. In the case of the Jetson
-Xavier NX, the SOM will always boot from eMMC, initially, but if properly
+Xavier NX, the SoM will always boot from eMMC, initially, but if properly
 configured, can then hand over the boot process to another memory medium.
 Therefore, it will always be required that a working image is flashed to the
 eMMC of the Jetson, and then, that, or a new filesystem, is placed onto the SD
@@ -1307,8 +1434,8 @@ card.</p>
 <section id="restarting-the-fan-service">
 <h3>Restarting the Fan Service<a class="headerlink" href="#restarting-the-fan-service" title="Link to this heading"></a></h3>
 <p>There is a known bug on the NVIDIA forums stating that sometimes, the fan will
-run at full speed constantly. This appeared in Jetpack Version 5.1 it is
-believed. To fix this issue, run the following command:</p>
+run at full speed constantly. This is believed to have appeared in JetPack Version 5.1.
+To fix this issue, run the following command:</p>
 <div class="code-shell"><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
 </pre></div>
 </div>
@@ -1327,17 +1454,17 @@ See <a class="reference internal" href="../hardware-guide/index.html#ad-gmsl522-
 </div>
 <section id="block-diagram">
 <h3>Block Diagram<a class="headerlink" href="#block-diagram" title="Link to this heading"></a></h3>
-<figure class="align-default" id="id11">
+<figure class="align-default" id="id13">
 <a class="reference internal image-reference" href="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/ad-gmsl522-sl_block_diagram.png"><img alt="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/ad-gmsl522-sl_block_diagram.png" src="https://media.githubusercontent.com/media/Carlian275/documentation/main/docs/solutions/reference-designs/ad-gmsl522-sl/software-guide/ad-gmsl522-sl_block_diagram.png" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Figure 11 </span><span class="caption-text">AD-GMSL522-SL Block Diagram</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 13 </span><span class="caption-text">AD-GMSL522-SL Block Diagram</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="i2c">
 <h3>I2C<a class="headerlink" href="#i2c" title="Link to this heading"></a></h3>
-<p>There are multiple ways to interface with the GMSL devices on AD-GMSL522-SL such
+<p>There are multiple ways to interface with the GMSL devices on the AD-GMSL522-SL Board such
 as the Linux I2CSET and I2CGET functions as well as smbus, though, regardless of
 the method, one should pay attention to which I2C bus of the Jetson is connected
 to which GMSL parts or connectors. See below for some example commands and what
@@ -1346,12 +1473,11 @@ bus goes where.</p>
 <li><p>I2C Bus 1: MAX96724, MAX96717</p></li>
 <li><p>I2C Bus 2: CSI SAMTEC Connector</p></li>
 </ul>
-<p>Some example commands to test out I2C are below:</p>
-<blockquote>
-<div><div class="code-shell"><div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#Reads all devices on the I2C Bus #1.</span>
+<p>Some example commands to test out I2C are found below:</p>
+<div class="code-shell"><div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#Reads all devices on the I2C Bus #1.</span>
 </pre></div>
 </div>
-<div class="clear-left"></div></div><div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#If a device is detected, its 7-bit address is noted)</span>
+<div class="clear-left"></div></div><div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#(If a device is detected, its 7-bit address is noted)</span>
 </pre></div>
 </div>
 <div class="clear-left"></div></div><div><div class="no-select float-left highlight-default notranslate"><div class="highlight"><pre><span></span>~$
@@ -1360,11 +1486,10 @@ bus goes where.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>i2cdetect<span class="w"> </span>-y<span class="w"> </span>-r<span class="w"> </span><span class="m">1</span>
 </pre></div>
 </div>
-<div class="clear-left"></div></div></div></div></blockquote>
-</section>
+<div class="clear-left"></div></div></div></section>
 <section id="mipi-qth-samtec-connector">
-<h3>MIPI / QTH SAMTEC CONNECTOR<a class="headerlink" href="#mipi-qth-samtec-connector" title="Link to this heading"></a></h3>
-<p>A QTH-030-01-L-D-A high speed connector is present on the bottom of the board.
+<h3>MIPI / QTH Samtec Connector<a class="headerlink" href="#mipi-qth-samtec-connector" title="Link to this heading"></a></h3>
+<p>A QTH-030-01-L-D-A high-speed connector is present on the bottom of the board.
 GMSL to CSI deserializer evaluation kits can be connected here. In the default
 configuration, if an evaluation kit is mounted on the carrier board, power to it
 will not be supplied by the carrier board. R136, R153, R152 can be soldered on
@@ -1373,8 +1498,8 @@ carrier board.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Please check the board and don’t plug the power supply of the
-evkit connected to P1 if R152 is installed 12 MIPI CSI lanes (CSI0-CSI3)
-of the XavierNX are routed to this connector, supporting either 4x2, 2x4 CSI-2
+Evkit connected to P1 if R152 is installed. 12 MIPI CSI lanes (CSI0-CSI3)
+of the Xavier NX are routed to this connector, supporting either 4x2 or 2x4 CSI-2
 DPHY v1.2 configurations.</p>
 </div>
 </section>
